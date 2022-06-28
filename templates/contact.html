@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <section class="heading-section">
+        <div class="container">
+            <div class="col-left">
+                <div class="breadcums">
+                    <a class="link" href="/">home</a>
+                    <img class="breadcum-icon-blue" src="static 'img/angle-icon-blue.svg' %}" alt="">
+                    <img class="breadcum-icon-white" src="static 'img/angle-icon-white.svg' %}" alt="">
+                    <p class="page" >Contact us</p>
+                </div>
+                <div class="heading-content">
+                    <h1 class="heading">Get in touch</h1>
+        
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+            <div class="col-right">
+                <img src="static 'img/Music-In-Africa-Live-scaled.jpg' %}" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="get-in-touch" style="background-color: whitesmoke;">
+        <div class="container">
+            <div class="col-left">
+                <h4 class="sub-heading">How can we help you</h4>
+                <h1 class="heading">Get in touch</h1>
+                <p>
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+                </p>
+
+                <div class="contact-icons">
+                    <a href="mailto:info@imbonizarwo.org" class="icon-list">
+                        <i class="fa fa-envelope-o"><span>info@imbonizarwo.org</span></i>
+                    </a>
+                    <a href="tel:+ 250 788 352 503" class="icon-list">
+                        <i class="fas fa-phone-alt"><span>+ 250 788 352 503</span></i>
+                    </a>
+                    <a href="https://wa.me/250788352503" class="icon-list">
+                        <i class="fa fa-whatsapp"><span>+ 250 788 352 503</span></i>
+                    </a>
+
+                    <div class="social-icons">
+                        <a href="" class="icon-list">
+                            <i class="fa fa-facebook-square"></i>
+                        </a>
+                        <a href="" class="icon-list">
+                            <i class="fa fa-twitter-square"></i>
+                        </a>
+                        <a href="" class="icon-list">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="" class="icon-list">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-right">
+                <h4 class="form-description">Fill the form below and send a message. Our team well reach out you as soon as possible</h4>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="half-form-elements">
+                            {{form.first_name}}
+                            {{form.last_name}}
+                    </div>
+                    <div class="half-form-elements">
+                        {{form.email}}
+                        {{form.phone_number}}
+                    </div>
+                    <div class="full-form-elements">
+                        {{form.client_message}}
+                    </div>
+                        <div class="half-form-elements">
+                            <input class="submit-btn btn-green form-control" type="submit" value="Send your message">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}

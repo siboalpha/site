@@ -1,0 +1,278 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="hero-section">
+    <div class="container">
+        <div class="col-left">
+            <h1>Imbonizarwo org</h1>
+            <p>IMBONIZARWO (IZ) is a legally registered non-governmental organization certified by the 
+                Rwanda Governance Board (RGB) with certificate number N0 :545/RGB/NGO/LP/10/2019 with 
+                overall objectives of Building Responsible Citizens through Arts, campaign and 
+                Interconnecting Generation.
+            </p>
+            <div class="call-to-action">
+                <a href="{% url 'about' %}" class="learn-more btn btn-green">Learn more</a>
+                <a class="wath-video open-button" onclick="openForm()"><i class="fas fa-play-circle"></i> <span>Watch
+                        the video </span></a>
+            </div>
+            <div class="imboni-video" id="imboni-video">
+                <img onclick="closeForm()" src="{% static 'img/Close button.svg' %}" alt="">
+                <div class="video">
+                    <iframe width="100%" height="auto"
+                        src="https://www.youtube.com/embed/_tEM_ZuNp74" title="Imboizarwo In Collaboration With Plan International Rwanda In The Fight Against Teenage Pregnancy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-right">
+            <img src="{% static 'img/Imbonizarwo members.jpg' %}" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="about-us">
+    <div class="container">
+        <h4 class="sub-heading white-color">What We Aim For</h4>
+        <h1 class="heading white-color">Organizational Vision</h1>
+        <p>
+            To build responsible citizens through inter-connection of generations.
+        </p>
+        <h1 class="heading white-color">Organizational Mission</h1>
+        <p>
+            To create practical space of sharing experience in eradicating gender based violence, promoting creativity arts and media for positive changes and peace education towards building social –economically transformed community.  
+        </p>
+
+        <div class="call-to-action">
+            <a href="{% url 'about' %}" class="learn-more btn btn-green">Learn more</a>
+            <a class="become-a-member  btn btn-blue">Watch the video</a>
+        </div>
+    </div>
+</section>
+
+<section class="projects" id="projects">
+    <div class="container">
+        <div class="col-left">
+            <h4 class="sub-heading">What we do</h4>
+            <h1 class="heading">Our Projects</h1>
+            <p>
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                took a galley of type and scrambled it to make a type specimen book.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                took a galley of type and scrambled it to make a type specimen book.
+            </p>
+            <a href="https://www.youtube.com/channel/UCpUb64qdUlS9E2bPCRSHc8A">
+                <button class="btn-green">More projects</button>
+            </a>
+
+        </div>
+
+        <div class="col-right">
+            <div class="projects-card">
+                <div class="project">
+                    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/16kfxKWClmw" title="UMURYANGO MUZIMA by IMBONI ZARWO 2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="project">
+                    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/rhmg57jzTN8" title="Nziriki official video 2021 by Imbonizarwo.org further partnership kindly contact us (0788352503)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="project">
+                    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/QbZx3WXN0Hk" title="WIMUROHA Official Video by Imbonizarwo.org ___ further partnership kindly contact us (0788352503)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="project">
+                    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/yjcOs5nrTQ8" title="UMWALI MWIZA Official Video by Imbonizarwo.org __Further partnership kindly contact us (0788352503)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="programs" id="programs">
+    <div class="container">
+        <h4 class="sub-heading white-color">What we focus on</h4>
+        <h1 class="heading white-color"> Main operational programs</h1>
+        <div class="programs-card">
+            <div class="program">
+                <p>
+                    Enhance primary health care services through campaign of fighting teenage pregnancies, STIs, 
+                    Sanitation and Drug Abuse in Rwandan community
+                </p>
+            </div>
+
+            <div class="program">
+                <p>
+                    Promoting the culture of Peace, Unity and Reconciliation Trough Arts/talents, dramatic 
+                    performance and inter - generation dialogs focusing on History of Rwanda
+                </p>
+            </div>
+
+            <div class="program">
+                <p>
+                    Promote learning by doing, through creative arts & talent development for educating 
+                    and build capacity of young generation through awareness raising campaign
+                </p>
+            </div>
+        </div>
+
+        <a href="{% url 'get-involved' %}" class="btn btn-green">Get involved</a>
+    </div>
+</section>
+
+<section class="campaigns" id="campaigns">
+    <div class="container">
+        <div class="col-left">
+            <h4 class="sub-heading">What we teach</h4>
+            <h1 class="heading">Successes Stories in 5 Years</h1>
+            <p>
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                took a galley of type and scrambled it to make a type specimen book.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                took a galley of type and scrambled it to make a type specimen book.
+            </p>
+            <a href="{% url 'contact' %}">
+                <button class="btn-green">Get in touch</button>
+            </a>
+        </div>
+
+        <div class="col-right">
+            <div class="campaign-card">
+
+                <div class="campaign">
+                    <p>Over 200,000 teenagers and youth were physically and online educated through awareness campaign, radio talks, YouTube channel and publications on the social media</p>
+                </div>
+
+                <div class="campaign">
+                    <p>
+                        Over 50,000 Youth were reached and educated on the role of peace, unity and reconciliations through awareness campaign, short term training and Arts
+                    </p>
+                </div>
+                <div class="campaign">
+                    <p>
+                        Over 15,000 People was educated on hygiene and sanitation through the campaign organized by Ministry of Local Government, Imbonizarwo and Rwanda Media Association
+                    </p>
+                </div>
+                <div class="campaign">
+                    <p>
+                        Over 80 needy families were materially and finally supported through our continuous annual chartable act conducted through partnership with KASNEB Rwanda
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="get-involved">
+    <div class="container">
+        <h4 class="sub-heading white-color">You want to help?</h4>
+        <h1 class="heading white-color">Get Involved</h1>
+        <p>
+            Are you interested in shaping and leading the ultimate youth campaign of building social economic development of Rwanda mainly in providing reliable solutions in in prevention of teenage pregnancies, enhancing primary health care services and enhancing children and girls’ rights? 
+        </p>
+
+        <a href="{% url 'get-involved' %}" class="btn btn-green"> Get Involved</a>
+    </div>
+</section>
+
+<section class="blog">
+    <div class="container">
+        <h4 class="sub-heading">Some news</h4>
+        <h1 class="heading">Blog</h1>
+        <div class="blogs">
+            {% for blog in page_obj %}
+            <a href="{% url 'single-blog' blog.id %}">
+                <div class="blog">
+                    <img src="{{blog.featured_image.url}}" alt="">
+                    <p class="blog-title">
+                        {{blog.blog_title}}
+                    </p>
+                    <p class="blog-description">
+                        {{blog.excerpt}}....<span class="read-more">Read more</span>
+                    </p>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="partners">
+    <div class="container">
+        <h4 class="sub-heading white-color">We don't do this alone</h4>
+        <h1 class="heading white-color">Our partners</h1>
+        <div class="partners-card">
+            <div class="partner-logo">
+                <img src="{% static 'img/partners/Rwanda-logo-150x150-1.png' %}" alt="">
+                <img src="{% static 'img/partners/kasneb-logo-150x150-1.png' %}" alt="">
+                <img src="{% static 'img/partners/Sweden-150x150-1.png' %}" alt="">
+                <img src="{% static 'img/partners/ur-logo-3-150x150-1.png' %}" alt="">
+                <img src="{% static 'img/partners/Kbl.png' %}" alt="">
+            </div>
+        </div>
+        <a href="{% url 'get-involved' %}" class="btn btn-green">Get involved</a>
+    </div>
+</section>
+
+<section class="get-in-touch">
+    <div class="container">
+        <div class="col-left">
+            <h4 class="sub-heading">How can we help you</h4>
+            <h1 class="heading">Get in touch</h1>
+            <p>
+                It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout.
+            </p>
+
+            <div class="contact-icons">
+                <a href="mailto:info@imbonizarwo.org" class="icon-list">
+                    <i class="fa fa-envelope-o"><span>info@imbonizarwo.org</span></i>
+                </a>
+                <a href="tel:+ 250 788 352 503" class="icon-list">
+                    <i class="fas fa-phone-alt"><span>+ 250 788 352 503</span></i>
+                </a>
+                <a href="https://wa.me/250788352503" class="icon-list">
+                    <i class="fa fa-whatsapp"><span>+ 250 788 352 503</span></i>
+                </a>
+
+                <div class="social-icons">
+                    <a href="" class="icon-list">
+                        <i class="fa fa-facebook-square"></i>
+                    </a>
+                    <a href="" class="icon-list">
+                        <i class="fa fa-twitter-square"></i>
+                    </a>
+                    <a href="" class="icon-list">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="" class="icon-list">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-right">
+            <h4 class="form-description">Fill the form below and send a message. Our team well reach out you as soon as
+                possible</h4>
+            <form action="" method="POST">
+                {% csrf_token %}
+                    <div class="half-form-elements">
+                            {{form.first_name}}
+                            {{form.last_name}}
+                    </div>
+                    <div class="half-form-elements">
+                        {{form.email}}
+                        {{form.phone_number}}
+                    </div>
+                    <div class="full-form-elements">
+                        {{form.client_message}}
+                    </div>
+                        <div class="half-form-elements">
+                            <input class="submit-btn btn-green form-control" type="submit" value="Send your message">
+                    </div>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

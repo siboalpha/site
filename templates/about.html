@@ -1,0 +1,248 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <section class="heading-section">
+        <div class="container">
+            <div class="col-left">
+                <div class="breadcums">
+                    <a class="link" href="">home</a>
+                    <img class="breadcum-icon-blue" src="{% static 'img/angle-icon-blue.svg' %}" alt="">
+                    <img class="breadcum-icon-white" src="{% static 'img/angle-icon-white.svg' %}" alt="">
+                    <p class="page" >About Us</p>
+                </div>
+                <div class="heading-content">
+                    <h1 class="heading">About Us</h1>
+        
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+            <div class="col-right">
+                <div class="empty">I am empty</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-history">
+        <div class="container">
+            <h4 class="sub-heading">From the beginning</h4>
+            <h1 class="heading">Our History</h1>
+
+            <div class="history-content">
+                <p class="history">
+                    IMBONIZARWO (IZ) is a legally registered non-governmental organization certified by the Rwanda Governance Board (RGB) with certificate number N0 :545/RGB/NGO/LP/10/2019 with overall objectives of Building Responsible Citizens through Arts, campaign and Interconnecting Generation; 
+                    Imbonizarwo implement the above program mainly in high schools and University under collaboration with Ministry of Education as prescribed in the attached letter N0 2738/12.01/2019 dated 25th September 2019 that recommend Imbonizarwo to implement program of Fighting Against Teenage Pregnancies in the High Schools and Universities around the Country;
+                    Imbonizarwo has a collaboration with the Ministry of Gender and Family Promotion prescribed by the attached letter NO 688/2100.2018 dated 09th July 2018 that recommended Imbonizarwo to proceed with a project of Fighting against teenage pregnancies and fight against Child Sexual Based Violence; 
+                    Imbonizarwo was created in the University of Rwanda as Mather institution and signed Memorandum of Understanding with overall objectives of speed-up community social economic education through awareness campaign, community outreach program towards enhancing leaning by doing to the UR Students and its Alumni. 
+
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="documentation">
+        <div class="container">
+            <h4 class="sub-heading"> Documentation</h4>
+            <h1 class="heading">Official documents</h1>
+
+            <div class="documents-categorties">
+                <div class="document-category">
+                    <h4 class="category-title">Legal Personality</h4>
+                    <ol class="ducuments-category-list">
+                        {% for document in official_documents %}
+                        {% if document.category == 'Legal Personality' %}
+                        <li><i class="fas fa-file-pdf"></i> {{document.title}}<a class="document-link" href="#"><i class="fas fa-cloud-download-alt"></i></a></li>
+                        {% endif %}
+                        {% endfor %}
+                    </ol>
+                </div>
+
+                <div class="document-category">
+                    <h4 class="category-title">Ministerial Collaboration</h4>
+                    <ol class="ducuments-category-list">
+                        {% for document in official_documents %}
+                        {% if document.category == 'Ministerial Collaboration' %}
+                        <li><i class="fas fa-file-pdf"></i> {{document.title}}<a class="document-link" href="#"><i class="fas fa-cloud-download-alt"></i></a></li>
+                        {% endif %}
+                        {% endfor %}
+                    </ol>
+                </div>
+
+                <div class="document-category">
+                    <h4 class="category-title">Signed MOUs</h4>
+                    <ol class="ducuments-category-list">
+                        {% for document in official_documents %}
+                        {% if document.category == 'Signed MOUs' %}
+                        <li><i class="fas fa-file-pdf"></i> {{document.title}}<a class="document-link" href="#"><i class="fas fa-cloud-download-alt"></i></a></li>
+                        {% endif %}
+                        {% endfor %}
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="member">
+        <div class="container">
+            <h4 class="sub-heading white-color">Do you want to join us?</h4>
+            <h1 class="heading white-color">Become a member</h1>
+            <p> 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a 
+                type specimen book.
+            </p>
+            <a href="#" class="btn btn-green">Become a member</a>
+        </div>
+    </section>
+
+    <section class="social-media">
+        <div class="container">
+            <h4 class="sub-heading">Follow Us</h4>
+            <h1 class="heading">Our social media</h1>
+            <p>
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a 
+                type specimen book.
+            </p>
+            <div class="social-media-list">
+                <a href=""><img src="{% static 'img/icons/Facebook.svg' %}" alt="Facebook"></a>
+                <a href=""><img src="{% static 'img/icons/Instagram.svg' %}" alt="Instagram"></a>
+                <a href=""><img src="{% static 'img/icons/providers-list.svg' %}" alt="LinkedIn"></a>
+                <a href=""><img src="{% static 'img/icons/Twitter.svg' %}" alt="Twitter"></a>
+                <a href=""><img src="{% static 'img/icons/Youtube.svg' %}" alt="Youtube"></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="vision-mission-about">
+        <div class="container">
+            <div class="col-left">
+                <div class="card mission">
+                    <h2 class="tittle"> Our Mission</h2>
+                    <p>
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p>
+                </div>
+
+                <div class="card vision">
+                    <h2 class="tittle">Our Vision</h2>
+                    <p>
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-right">
+                <img src="{% static 'img/imbonizarwo theatre team in cbe.jpg' %}" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="partners">
+        <div class="container">
+            <h4 class="sub-heading white-color">We don't do this alone</h4>
+            <h1 class="heading white-color">Our partners</h1>
+            <div class="partners-card">
+                <div class="partner-logo">
+                    <img src="{% static 'img/partners/Rwanda-logo-150x150-1.png' %}" alt="">
+                    <img src="{% static 'img/partners/kasneb-logo-150x150-1.png' %}" alt="">
+                    <img src="{% static 'img/partners/Sweden-150x150-1.png' %}" alt="">
+                    <img src="{% static 'img/partners/ur-logo-3-150x150-1.png' %}" alt="">
+                    <img src="{% static 'img/partners/Kbl.png' %}" alt="">
+                </div>
+            </div>
+            <button class="btn-green">Get involved</button>
+        </div>
+    </section>
+
+    <section class="team">
+        <div class="container">
+            <h4 class="sub-heading">People behind everything</h4>
+            <h1 class="heading">Out Team</h1>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img class="member-img" src="{% static 'img/black-professional.jpg' %}" alt="">
+                    <p class="member-name">KWIZARA J. Pierre</p>
+                    <div class="member-social-icons">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <img class="member-img" src="{% static 'img/black-professional.jpg' %}" alt="">
+                    <p class="member-name">KWIZARA J. Pierre</p>
+                    <div class="member-social-icons">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <img class="member-img" src="{% static 'img/black-professional.jpg' %}" alt="">
+                    <p class="member-name">KWIZARA J. Pierre</p>
+                    <div class="member-social-icons">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <img class="member-img" src="{% static 'img/black-professional.jpg' %}" alt="">
+                    <p class="member-name">KWIZARA J. Pierre</p>
+                    <div class="member-social-icons">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <img class="member-img" src="{% static 'img/black-professional.jpg' %}" alt="">
+                    <p class="member-name">KWIZARA J. Pierre</p>
+                    <div class="member-social-icons">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <img class="member-img" src="{% static 'img/black-professional.jpg' %}" alt="">
+                    <p class="member-name">KWIZARA J. Pierre</p>
+                    <div class="member-social-icons">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <img class="member-img" src="{% static 'img/black-professional.jpg' %}" alt="">
+                    <p class="member-name">KWIZARA J. Pierre</p>
+                    <div class="member-social-icons">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <img class="member-img" src="{% static 'img/black-professional.jpg' %}" alt="">
+                    <p class="member-name">KWIZARA J. Pierre</p>
+                    <div class="member-social-icons">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+{% endblock %}

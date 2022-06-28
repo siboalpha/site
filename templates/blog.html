@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="heading-section">
+    <div class="container">
+        <div class="col-left">
+            <div class="breadcums">
+                <a class="link" href="">home</a>
+                <img class="breadcum-icon-blue" src="{% static 'img/angle-icon-blue.svg' %}" alt="">
+                <img class="breadcum-icon-white" src="{% static 'img/angle-icon-white.svg' %}" alt="">
+                <p class="page">Blog</p>
+            </div>
+            <div class="heading-content">
+                <h1 class="heading">Blog</h1>
+
+                <p>
+                    Explore our blog to know more about our activites, projects and programs. We have beenfeature in several newspapers in Rwanda. 
+                </p>
+            </div>
+        </div>
+        <div class="col-right">
+            <div class="empty">I am empty</div>
+        </div>
+    </div>
+</section>
+<section class="blog" style="background-color: whitesmoke;">
+    <div class="container">
+        <h1 class="heading">Eplore Our Blog</h1>
+        <div class="blogs">
+            {% for blog in page_obj %}
+            <a href="{% url 'single-blog' blog.id %}">
+                <div class="blog">
+                    <img src="{{blog.featured_image.url}}" alt="">
+                    <p class="blog-title">
+                        {{blog.blog_title}}
+                    </p>
+                    <p class="blog-description">
+                        {{blog.excerpt}}....<span class="read-more">Read more</span>
+                    </p>
+                </div>
+            </a>
+            {% endfor%}
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <section class="heading-section">
+        <div class="container">
+            <div class="col-left">
+                <div class="breadcums">
+                    <a class="link" href="/">home</a>
+                    <img class="breadcum-icon-blue" src="{% static 'img/angle-icon-blue.svg' %}" alt="">
+                    <img class="breadcum-icon-white" src="{% static 'img/angle-icon-white.svg' %}" alt="">
+                    <p class="page" >Get involved</p>
+                </div>
+                <div class="heading-content">
+                    <h1 class="heading">Get involved</h1>
+        
+                    <p>
+                        Are you interested in shaping and leading the ultimate youth campaign of building social economic development of Rwanda mainly in providing reliable solutions in in prevention of teenage pregnancies, enhancing primary health care services and enhancing children and girls’ rights? 
+                    </p>
+                </div>
+            </div>
+            <div class="col-right">
+                <div class="empty">I am empty</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="get-involved-section" style="background-color: whitesmoke;">
+        <div class="container">
+            <div class="col-left">
+                <h2 class="help-title">You can help us:</h2>
+                <div class="help-cards">
+                    <div class="help-card">
+                        <h4>Financially</h4>
+                        <p>
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled 
+                        </p>
+                    </div>
+                    <div class="help-card">
+                        <h4>Ideas</h4>
+                        <p>
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled 
+                        </p>
+                    </div>
+                    <div class="help-card">
+                        <h4>Networking</h4>
+                        <p>
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled 
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-right">
+                <h4 class="form-description">Fill the form below and send a message. Our team well reach out you as soon as possible</h4>
+                <form action="" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="half-form-elements">
+                            {{form.first_name}}
+                            {{form.last_name}}
+                    </div>
+                    <div class="half-form-elements">
+                        {{form.email}}
+                        {{form.phone_number}}
+                    </div>
+                    <div class="half-form-elements">
+                        {{form.category}}
+                    </div>
+                    <div class="half-form-elements">
+                        {{form.education}}
+                        {{form.college}}
+                    </div>
+                    <div class="full-form-elements">
+                        {{form.experience}}
+                        {{form.expectations}}
+                    </div>
+                    <div class="full-form-elements">
+                            {{form.cv}}
+                        <input class="submit-btn btn-green form-control" type="submit" value="Send your message">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="member">
+        <div class="container">
+            <h4 class="sub-heading white-color">Do you want to join us?</h4>
+            <h1 class="heading white-color">Become a member</h1>
+            <p> 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type and scrambled it to make a 
+                type specimen book.
+            </p>
+            <a href="{% url 'volunteers' %}" class="btn btn-green">Become a member</a>
+        </div>
+    </section>
+
+{% endblock %}

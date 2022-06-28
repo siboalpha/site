@@ -1,0 +1,28 @@
+Static Folder: /var/www/static
+Media Folder: /var/www/media
+WSGi folder: /var/www/DjangoApp
+WSGI file path: /var/www/DjangoApp/wsgi.py
+Python path: /var/www
+Python home: /var/www/venv
+
+
+Alias /static /var/www/static
+<Directory /var/www/static>
+    Require all granted
+</Directory>
+
+Alias /media /var/www/media
+<Directory /var/www/media>
+    Require all granted
+</Directory>
+
+<Directory /var/www/DjangoApp>
+    <Files wsgi.py>
+        Require all granted
+    </Files>
+</Directory>
+
+WSGIDaemonProcess imbonizarwo python-home=Python home: /var/www/venv python-path=/var/www
+WSGIProcessGroup imbonizarwo
+WSGIScriptAlias /var/www/DjangoApp/wsgi.py
+

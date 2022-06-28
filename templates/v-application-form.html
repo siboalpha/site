@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="head-seaction">
+    <div class="empty">I am empty</div>
+</section>
+<section class="application-form">
+    <div class="container">
+        <h1 class="heading">Application for voluteering</h1>
+        <p>
+            Are you interested in shaping and leading the ultimate youth campaign of building social economic
+            development of Rwanda mainly in providing reliable solutions in in prevention of teenage pregnancies,
+            enhancing primary health care services and enhancing children and girls’ rights?
+            Imbonizarwo is actively looking for passionate young activists and change makers mainly living in Kigali
+            City, Muhanga, Rwamagana, Nyamata and Musanze to be part of ultimate campaign on youth-led collective action
+            for fighting teenage Pregnancies and sexual reproductive health.
+            This unpaid internship covering a period of Six Months, One-year or two years volunteering opportunity in
+            Imbonizarwo youth Organization’s initiatives in according to your choice.
+        </p>
+
+        <h2>Duties and responsibilities</h2>
+
+        <p>
+            To support the management of Imbonizarwo to accomplish its goal through assistance in project development,
+            partnership mapping both local & global, assistance in project implementation and assistance in reporting
+            towards enhancing the organization long term vision.
+        </p>
+
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="half-form-elements">
+                {{form.first_name}}
+                {{form.last_name}}
+            </div>
+            <div class="half-form-elements">
+                {{form.email}}
+                {{form.phone_number}}
+            </div>
+            <div class="half-form-elements">
+                {{form.nationality}}
+                {{form.current_adress}}
+            </div>
+            <div class="half-form-elements">
+                {{form.level_of_education}}
+                {{form.specialization}}
+            </div>
+            <div class="half-form-elements">
+                {{form.graduation_country}}
+            </div>
+            <div class="full-form-elements">
+                <p>
+                    Please indicate your competency/experience in working with youth initiatives or
+                    any experience of working with Non-government organization that can be based on
+                    during the selection process of volunteers. (Do not exceed 200 Words)
+                </p>
+                {{form.experience}}
+            </div>
+            <div class="full-form-elements">
+                <p>
+                    Explain the key component of project proposals/Concept note and its impact to the
+                    organization (Do not exceed 100 Words);
+                </p>
+                {{form.consept_note}}
+            </div>
+
+            <div class="half-form-elements half-half">
+                <p>Do you have a personal computer?</p>
+            </div>
+            <div class="half-form-elements half-half">
+                {{form.owns_a_computer}}
+            </div>
+            <div class="half-form-elements half-half">
+                <p>Upload your cv</p>
+            </div>
+            <div class="half-form-elements half-half">
+                {{form.cv}}
+            </div>
+            <div class="half-form-elements">
+                <input class="submit-btn btn-green form-control" type="submit" value="Submit your application">
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="top-section">
+    <img class="featured-full-image" src="{{blog.featured_image.url}}" alt="">
+</section>
+<section class="content-section">
+    <div class="container">
+        <div class="featured-image">
+            <img src="{{blog.featured_image.url}}" alt="">
+        </div>
+        <h1 class="heading title">
+            {{blog.title}}
+        </h1>
+        <div class="credits">
+            <div class="card date">
+                <img class="icon" src="/img/icons/Calendar.svg" alt="">
+                <p class="date">20/03/2023</p>
+            </div>
+            <div class="card author">
+                <img class="icon" src="/img/icons/User.svg" alt="">
+                <p class="author-name">Imbonizarwo</p>
+            </div>
+        </div>
+        <div class="content">
+            {{blog.content | safe}}
+        </div>
+    </div>
+</section>
+{% endblock %}

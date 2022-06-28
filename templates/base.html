@@ -1,0 +1,153 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="{% static 'img/cropped-WhatsApp-Image-2019-04-05-at-16.15.00.jpeg' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/54c10e37be.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <title>Imbonizarwo</title>
+</head>
+<body>
+    <header>
+        <div class="topnav-mobile">
+            <div class="container">
+                <a href="{% url 'get-involved' %}" class="btn-green"> <i class="far fa-hand-paper"></i> Get involved</a>
+                <a href="{% url 'login' %}" class="login"> <i class="far fa-user-circle"></i> Login</a>
+            </div>
+        </div>
+        <div class="topnav-desk">
+            <div class="container">
+                <div class="contacts">
+                    <ol>
+                        <li> <a href="mailto:info@imbonizarwo.com"><i class="fa fa-envelope-o"></i>
+                                <p>info@imbonizarwo.com</p>
+                            </a></li>
+                        <li><a href="tel:+ 250 788 352 503"><i class="fas fa-phone-alt"></i>
+                                <p>+ 250 788 352 503</p>
+                            </a></li>
+                    </ol>
+                </div>
+                <div class="social-icons">
+                    <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fab fa-youtube"></i></a></li>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="container">
+
+            <nav>
+                <div class="nav-menu">
+                    <div class="logo">
+                        <a href="{% url 'home' %}">
+                            <img src="{% static 'img/cropped-WhatsApp-Image-2019-04-05-at-16.15.00.jpeg' %}" alt="Logo Image">
+                        </a>
+                    </div>
+                    <div class="hamburger">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'about' %}">About us</a></li>
+                        <li class="dropdown">
+                            <a class="dropbtn">Activities</a>
+                            <div class="dropdown-content">
+                              <a href="/#projects">Projects</a>
+                              <a href="/#programs">Programs</a>
+                              <a href="/#campaigns">Campaigns</a>
+                            </div>
+                         </a></li>
+                        <li><a href="{% url 'blog' %}">Blog</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
+
+
+                    </ul>
+                </div>
+
+                <div class="buttons">
+                    <a class="btn btn-green" href="{% url 'get-involved' %}"><i class="far fa-hand-paper"></i> Get involved</a>
+                    <a class="btn btn-blue" href="{% url 'login' %}" class="btn-blue"> <i class="far fa-user-circle"></i> Login</a>
+                </div>
+            </nav>
+        </div>
+        <div class="breaking-news">
+            <div class="container">
+                <p class="breaking-news-content">
+                    <span class="breaking-news-title">Important Updates: </span> <span class="breaking-news-details">Lorem Ipsum has been the industry's 
+                        standard dummy text ever since the 1500s, when an 
+                        unknown printer...</span><a href="">read more</a>
+                </p>
+                </div>
+            </div>
+        </div>
+
+    </header>   
+    {% block content %}
+    {% endblock %}
+    <footer>
+        <div class="container">
+            <div class="footer-about">
+                <h4 class="title-title">Imbonizarwo org</h4>
+                <p>
+                    IMBONIZARWO (IZ) is a legally registered non-governmental organization certified by the Rwanda Governance Board (RGB) with certificate number N0 :545/RGB/NGO/LP/10/2019 with overall objectives of Building Responsible Citizens through Arts, campaign and Interconnecting Generation
+                </p>
+                <div class="social-icons">
+                    <a href="" class="icon-list">
+                        <i class="fa fa-facebook-square"></i>
+                    </a>
+                    <a href="" class="icon-list">
+                        <i class="fa fa-twitter-square"></i>
+                    </a>
+                    <a href="" class="icon-list">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="" class="icon-list">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="important-links">
+                <h4 class="title-title">Imprtant links</h4>
+                <ol>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about'}">About us</a></li>
+                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                    <li><a href="{% url 'contact' %}">Get in touch</a></li>
+                </ol>
+            </div>
+
+            <div class="footer-blog">
+                <h4 class="title-title">Recent on our blog</h4>
+                <div class="blogs">
+                    <div class="blog">
+                        <img src="{% static 'img/Music-In-Africa-Live-scaled.jpg' %}" alt="">
+                        <p class="blog-description">
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took  
+                        </p>
+                    </div>
+                    <div class="blog">
+                        <img src="{% static 'img/Music-In-Africa-Live-scaled.jpg' %}" alt="">
+                        <p class="blog-description">
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took  
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
