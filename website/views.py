@@ -24,19 +24,19 @@ def home(request):
             client_name = form.cleaned_data['first_name']
             client_emal = form.cleaned_data['email']
             context = {'client_name':client_name, 'client_emal':client_emal}
-            email_template = render_to_string('email_templates/new_message.html', context)
+            #email_template = render_to_string('email_templates/new_message.html', context)
 
-            email = EmailMessage(
-                'New message from website',
-                email_template,
-                settings.EMAIL_HOST_USER,
-                [settings.EMAIL_HOST_USER]
-            )
-            email.fail_silently = False
-            try:
-                email.send()
-            except:
-                return HttpResponse("Information sent but Imbonizarwo was not notified")
+            #email = EmailMessage(
+            #    'New message from website',
+            #    email_template,
+            #    settings.EMAIL_HOST_USER,
+            #    [settings.EMAIL_HOST_USER]
+            #)
+            #email.fail_silently = False
+            #try:
+            #    email.send()
+            #except:
+            #    return HttpResponse("Information sent but Imbonizarwo was not notified")
         return redirect('thank-you')
     if maintenance:
         return render(request, 'maintenance.html')

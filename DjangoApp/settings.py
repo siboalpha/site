@@ -132,6 +132,15 @@ STATICFILES_DIRS = [
 ]
 STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
+#EMAIL BACKEND
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.getenv('MY-EMAIL')
+EMAIL_HOST_PASSWORD = os.getenv('MY_EMAIL_PASSWORD')
+
 #S3 BUCKETS CONFIG
 '''
 AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
