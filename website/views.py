@@ -110,7 +110,11 @@ def singleBlog(request, pk):
 
 def base(request):
     blogs = Blog.objects.all()
-    context = {'blogs': blogs}
+    important_updates = ImportantUpdate.objects.all
+    paginator = Paginator(important_updates, 1)
+    page_number = request.GET.get('page')
+    notifications = paginator.get_page(page_number)
+    context = {'blogs': blogs, 'notifications': notifications}
     return render(request, 'base.html', context)
 
 

@@ -81,16 +81,16 @@
                 </div>
             </nav>
         </div>
+        {% if notifications.exists %}
         <div class="breaking-news">
             <div class="container">
                 <p class="breaking-news-content">
-                    <span class="breaking-news-title">Important Updates: </span> <span class="breaking-news-details">Lorem Ipsum has been the industry's 
-                        standard dummy text ever since the 1500s, when an 
-                        unknown printer...</span><a href="">read more</a>
+                    <span class="breaking-news-title">Important Updates: </span> <span class="breaking-news-details">{{notifications.title}}
+                        unknown printer...</span><a href="{{notifications.url}}">read more</a>
                 </p>
                 </div>
-            </div>
         </div>
+        {% endif %}
 
     </header>   
     {% block content %}

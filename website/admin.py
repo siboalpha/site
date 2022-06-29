@@ -21,3 +21,7 @@ class OfficialDocumentsAdmin(admin.ModelAdmin):
 @admin.register(Volunteer)
 class VolunteerAdmin(admin.ModelAdmin):
     list_display = ("first_name", "last_name", 'email', 'phone_number', 'nationality', 'membership_status')
+
+@admin.register(ImportantUpdate)
+class ImportantUpdateAdmin(admin.ModelAdmin):
+    list_display = ("title", "update_link")

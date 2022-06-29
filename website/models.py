@@ -94,3 +94,7 @@ class Volunteer(models.Model):
     consept_note = models.TextField(max_length=2550, null=True)
     owns_a_computer = models.TextField(max_length=2550, null=True)
     cv = models.FileField(null=True, upload_to="Applicant's CVs")
+
+class ImportantUpdate(models.Model):
+    title = models.CharField(max_length=255)
+    update_link = models.URLField(max_length=255)
