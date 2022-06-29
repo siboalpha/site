@@ -63,7 +63,7 @@
                     <ol class="ducuments-category-list">
                         {% for document in official_documents %}
                         {% if document.category == 'Ministerial Collaboration' %}
-                        <li><i class="fas fa-file-pdf"></i> {{document.title}}<a class="document-link" href="{{document.document_file.url}}" target="_blank"></i></a></li>
+                        <li><i class="fas fa-file-pdf"></i> {{document.title}}<a class="document-link" href="{{document.document_file.url}}" target="_blank"><i class="fas fa-cloud-download-alt"></i></a></li>
                         {% endif %}
                         {% endfor %}
                     </ol>
@@ -74,7 +74,7 @@
                     <ol class="ducuments-category-list">
                         {% for document in official_documents %}
                         {% if document.category == 'Signed MOUs' %}
-                        <li><i class="fas fa-file-pdf"></i> {{document.title}}<a class="document-link" href="{{document.document_file.url}}" target="_blank"></i></a></li>
+                        <li><i class="fas fa-file-pdf"></i> {{document.title}}<a class="document-link" href="{{document.document_file.url}}" target="_blank"><i class="fas fa-cloud-download-alt"></i></a></li>
                         {% endif %}
                         {% endfor %}
                     </ol>
