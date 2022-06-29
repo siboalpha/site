@@ -928,8 +928,7 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 20px;
-
-        .footer-about {
+        .social-media {
             background-color: #284260;
             padding: 20px;
             border-radius: 5px;
@@ -942,12 +941,11 @@ footer {
 
                 a {
                     i {
-                        font-size: 24px;
+                        font-size: 34px;
                     }
                 }
             }
         }
-
         .important-links {
             background-color: #284260;
             padding: 20px;
@@ -958,35 +956,6 @@ footer {
                 flex-direction: column;
                 justify-content: center;
                 gap: 10px;
-            }
-        }
-
-        .footer-blog {
-            .blogs {
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-
-                .blog {
-                    border-radius: 5px;
-                    background-color: #284260;
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
-
-                    img {
-                        width: 150px;
-                        height: 100px;
-                        object-fit: cover;
-                        border-radius: 5px;
-                        z-index: 0;
-
-                    }
-
-                    .blog-description {
-                        text-align: start;
-                    }
-                }
             }
         }
 
@@ -1259,7 +1228,7 @@ footer {
             .partners-card {
                 margin-bottom: 50px;
                 .partner-logo {
-                    grid-template-columns: 17% 17% 17% 17% 17%;
+                    grid-template-columns: 23% 23% 23% 23%;
                     justify-content: space-between;
                 }
             }
@@ -1302,10 +1271,9 @@ footer {
         text-align: start;
         .container {
             display: grid;
-            grid-template-columns: 32% 32% 32%;
-            .footer-about {
-                padding: 0;
-                background-color: #18181800;
+            grid-template-columns: 49% 49%;
+            .social-media {
+                background: var(--dark-blue);
                 .social-icons {
                     justify-content: start;
                 }
@@ -1314,7 +1282,8 @@ footer {
                 padding: 0;
                 background-color: #18181800;
                 ol {
-                    flex-direction: column;
+                    flex-direction: row;
+                    justify-content: start;
                     gap: 10px;
                 }
             }
