@@ -1,10 +1,8 @@
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+#load_dotenv()
 load_dotenv("/home/admin/site/DjangoApp/.env")
-
-import mimetypes
-mimetypes.add_type("text/css", ".css", True)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
