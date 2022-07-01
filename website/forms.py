@@ -1,6 +1,3 @@
-from dataclasses import field
-from email.policy import default
-from pyexpat import model
 from django.forms import ModelForm, TextInput, ImageField, Textarea, EmailInput, Select, FileInput
 from ckeditor.fields import RichTextFormField
 from ckeditor_uploader.fields import RichTextUploadingFormField
@@ -12,7 +9,7 @@ class AddBlogFrom(ModelForm):
         fields = ['title', 'featured_image', 'content']
         widgets = {
             'title': TextInput(attrs={'class':'form-control', 'placeholder':'Blog title'}),
-            'content': RichTextUploadingFormField(config_name=default)
+            'content': RichTextUploadingFormField()
         }
 
 

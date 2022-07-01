@@ -9,6 +9,7 @@ from DjangoApp import settings
 from django.template.loader import render_to_string
 
 # Create your views here.
+
 maintenance = False
 def home(request):
     blog = Blog.objects.all()
