@@ -18,7 +18,7 @@
         <div class="topnav-mobile">
             <div class="container">
                 <a href="{% url 'get-involved' %}" class="btn-green"> <i class="far fa-hand-paper"></i> Get involved</a>
-                <a href="{% url 'admin' %}" class="login"> <i class="far fa-user-circle"></i> Login</a>
+                <a href="#" class="login"> <i class="far fa-user-circle"></i> Login</a>
             </div>
         </div>
         <div class="topnav-desk">
@@ -81,16 +81,6 @@
                 </div>
             </nav>
         </div>
-        {% if notifications.exists %}
-        <div class="breaking-news">
-            <div class="container">
-                <p class="breaking-news-content">
-                    <span class="breaking-news-title">Important Updates: </span> <span class="breaking-news-details">{{notifications.title}}
-                        unknown printer...</span><a href="{{notifications.url}}">read more</a>
-                </p>
-                </div>
-        </div>
-        {% endif %}
 
     </header>   
     {% block content %}

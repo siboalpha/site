@@ -644,6 +644,12 @@ section .container {
 
 .hero-section {
   padding: 0;
+  padding-top: 200px;
+  background: url("/static/img/Imbonziarwo music band.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: #192a3dbc;
+  background-blend-mode: overlay;
 }
 
 .hero-section .container {
@@ -652,16 +658,16 @@ section .container {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .hero-section .container .col-left {
-  background-color: #f2f5f7f4;
+  background-color: #f2f5f7bd;
   padding: 30px;
   border-radius: 10px;
-  margin: -170px 20px 20px 20px;
+  margin: 20px;
   position: relative;
 }
 
@@ -730,10 +736,28 @@ section .container {
   height: 200px;
 }
 
-.hero-section .container .col-right img {
-  height: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
+.hero-section .container .col-right .updates {
+  text-align: start;
+  background-color: #f2f5f7bd;
+  margin: 20px;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.hero-section .container .col-right .updates .updates-list {
+  margin-top: 30px;
+}
+
+.hero-section .container .col-right .updates .updates-list li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  color: #181818;
+}
+
+.hero-section .container .col-right .updates .updates-list li a img {
+  width: 30px;
 }
 
 .about-us {
@@ -1056,23 +1080,21 @@ footer .container .important-links ol {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 100px;
-    padding: 250px 0;
+    gap: 50px;
+    padding: 150px 0;
   }
   .hero-section .container .col-left {
     text-align: start;
     width: 50%;
-    padding: 0;
-    border-radius: 0;
-    background-color: white;
-    z-index: 0;
-    margin: 0;
+    background: none;
   }
   .hero-section .container .col-left h1 {
     font-size: 40px;
+    color: whitesmoke;
   }
   .hero-section .container .col-left p {
     font-size: 22px;
+    color: whitesmoke;
   }
   .hero-section .container .col-left .call-to-action {
     -webkit-box-orient: horizontal;
@@ -1081,6 +1103,7 @@ footer .container .important-links ol {
             flex-direction: row;
   }
   .hero-section .container .col-left .call-to-action .wath-video {
+    color: whitesmoke;
     font-size: 50px;
   }
   .hero-section .container .col-left .call-to-action .wath-video span {
@@ -1108,9 +1131,6 @@ footer .container .important-links ol {
   .hero-section .container .col-right {
     width: 50%;
   }
-  .hero-section .container .col-right img {
-    border-radius: 100px 0 100px 0;
-  }
   .projects .container .col-right .projects-card {
     -ms-grid-columns: 50% 50%;
         grid-template-columns: 50% 50%;
@@ -1137,9 +1157,20 @@ footer .container .important-links ol {
 }
 
 @media screen and (min-width: 760px) {
+  .hero-section {
+    height: 100vh;
+    padding: 0;
+    padding-top: 120px;
+  }
   .hero-section .container .col-left h1 {
     font-size: 60px;
     font-weight: bold;
+  }
+  .hero-section .container .col-right {
+    padding-left: 50px;
+  }
+  .hero-section .container .col-right .updates {
+    margin: 0;
   }
   .about-us .container p {
     margin: 20px 25% 70px 25%;

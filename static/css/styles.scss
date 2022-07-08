@@ -577,18 +577,23 @@ section {
 
 .hero-section {
     padding: 0;
-
+    padding-top: 200px;
+    background: url("/static/img/Imbonziarwo\ music\ band.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: #192a3dbc;
+    background-blend-mode: overlay;
     .container {
         width: 100%;
         //padding: 100px 0 50px 0;
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
 
         .col-left {
-            background-color: #f2f5f7f4;
+            background-color: #f2f5f7bd;
             padding: 30px;
             border-radius: 10px;
-            margin: -170px 20px 20px 20px;
+            margin: 20px;
             position: relative;
 
             h1 {
@@ -642,11 +647,27 @@ section {
         }
 
         .col-right {
-
-            img {
-                height: 400px;
-                object-fit: cover;
+            .updates {
+                text-align: start;
+                background-color: #f2f5f7bd;
+                margin: 20px;
+                padding: 30px;
+                border-radius: 10px;
+                .updates-list {
+                    margin-top: 30px;
+                    li {
+                        a {
+                            display: flex;
+                            gap: 10px;
+                            img {
+                                width: 30px;
+                            }
+                            color: #181818;
+                        }
+                    }
+                }
             }
+            
         }
     }
 }
@@ -971,26 +992,25 @@ footer {
             width: 80vw;
             flex-direction: row;
             align-items: center;
-            gap: 100px;
-            padding: 250px 0 ;
+            gap: 50px;
+            padding: 150px 0 ;
             .col-left {
                 text-align: start;
                 width: 50%;
-                padding: 0;
-                border-radius: 0;
-                background-color: white;
-                z-index: 0;
-                margin: 0;
+                background: none;
                 h1 {
                     font-size: 40px;
+                    color: whitesmoke;
                 }
                 p {
                     font-size: 22px;
+                    color: whitesmoke;
                 }
                 .call-to-action {
                     flex-direction: row;
 
                     .wath-video {
+                        color: whitesmoke;
                         font-size: 50px;
                         span {
                             font-size: 20px;
@@ -1019,9 +1039,6 @@ footer {
             }
             .col-right {
                 width: 50%;
-                img {
-                    border-radius: 100px 0 100px 0;
-                }
             }
         }
     }
@@ -1092,11 +1109,20 @@ footer {
 
 @media screen and (min-width: 760px) {
     .hero-section {
-        .container {
+        height: 100vh;
+        padding: 0;
+        padding-top: 120px;
+        .container {  
             .col-left{
                 h1{
                     font-size: 60px;
                     font-weight: bold;
+                }
+            }
+            .col-right {
+                padding-left: 50px;
+                .updates {
+                    margin: 0;
                 }
             }
         }
