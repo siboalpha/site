@@ -60,7 +60,7 @@
                     <ul class="nav-links">
                         <li><a href="#">Home</a></li>
                         <li class="dropdown">
-                            <a href="/about.html" class="dropbtn">About Us</a>
+                            <a href="{% url 'about' %}" class="dropbtn">About Us</a>
                             <div class="dropdown-content">
                                 <a href="/#projects">Become a member</a>
                                 <a href="/#">Volunteer</a>   
@@ -76,9 +76,9 @@
                             </div>
                             </a>
                         </li>
-                        <li><a href="/blog.html">Blog</a></li>
-                        <li><a href="/gallery.html">gallery</a></li>
-                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="{% url 'blog' %}">Blog</a></li>
+                        <li><a href="{% url 'gallery' %}">gallery</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
                     </ul>
                 </div>
 

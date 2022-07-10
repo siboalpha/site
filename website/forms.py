@@ -28,8 +28,7 @@ class ContactFormMessageForm (ModelForm):
 class GettingInvolvedLeadForm(ModelForm):
     class Meta:
         model = GettingInvolvedLead
-        fields = ['first_name', 'last_name', 'email', 'phone_number',
-        'category', 'education', 'experience', 'college', 'expectations', 'cv' 
+        fields = ['first_name', 'last_name', 'email', 'phone_number', 'category'
         ]
 
         widgets = {
@@ -38,12 +37,6 @@ class GettingInvolvedLeadForm(ModelForm):
             'email': EmailInput(attrs={'class':'form-control', 'placeholder': 'Your email address'}),
             'phone_number': TextInput(attrs={'class':'form-control', 'placeholder': 'Your phone number'}),
             'category': Select(attrs={'class': 'form-control'}),
-            'experience': Textarea(attrs={'class':'form-control', 'placeholder': 'Type your experience here', 'rows': '3'}),
-            'education': TextInput(attrs={'class':'form-control', 'placeholder': 'Your hiest degree'}),
-            'college': TextInput(attrs={'class':'form-control', 'placeholder': 'Your college or school'}),
-            'expectations': Textarea(attrs={'class':'form-control', 'placeholder': 'Type your expectations here', 'rows': '3'}),
-            'cv': FileInput(attrs={'class': 'form-control'}),
-
 
         }
 

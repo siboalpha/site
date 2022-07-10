@@ -11,6 +11,8 @@ urlpatterns = [
 
     path('add-blog/', views.addBlog, name='add-blog'),
 
+    path('gallery', views.gallery, name='gallery'),
+
     path('contact/', views.contact, name='contact'),
     path('get-involved/', views.getInvolved, name='get-involved'),
     path('login/', views.login, name='login'),

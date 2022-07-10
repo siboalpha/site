@@ -208,50 +208,19 @@
         <h4 class="sub-heading">Some news</h4>
         <h1 class="heading">Blog</h1>
         <div class="blogs">
-            <a href="#">
+            {% for blog in blogs %}
+            <a href="{% url 'single-blog' blog.id %}">
                 <div class="blog">
-                    <img src="{% static 'img/00-story-protest.jpg' %}" alt="">
+                    <img src="{% static 'img/imbonizarwo members chatting.jpg' %}" alt="">
                     <p class="blog-title">
-                        Umuryango Imbonizarwo wahuje abahanzi bize ku Nyundo
+                        {{blog.title}}
                     </p>
                     <p class="blog-description">
-                        It is a long established fact that a reader will be distracted by the readable
-                        content of a page when looking at its layout. The point of using Lorem Ipsum is
-                        that it has a more-or-less normal distribution of letters, as opposed to using
-                        'Content here, content here'.... <span class="read-more">Read more <i class="fas fa-angle-double-right"></i></span>
+                        {{blog.excerpt}}... <span class="read-more">Read more <i class="fas fa-angle-double-right"></i></span>
                     </p>
                 </div>
             </a>
-
-            <a href="#">
-                <div class="blog">
-                    <img src="{% static 'img/00-story-protest.jpg' %}" alt="">
-                    <p class="blog-title">
-                        Umuryango Imbonizarwo wahuje abahanzi bize ku Nyundo
-                    </p>
-                    <p class="blog-description">
-                        It is a long established fact that a reader will be distracted by the readable
-                        content of a page when looking at its layout. The point of using Lorem Ipsum is
-                        that it has a more-or-less normal distribution of letters, as opposed to using
-                        'Content here, content here'.... <span class="read-more">Read more<i class="fas fa-angle-double-right"></i></span>
-                    </p>
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="blog">
-                    <img src="{% static 'img/00-story-protest.jpg' %}" alt="">
-                    <p class="blog-title">
-                        Umuryango Imbonizarwo wahuje abahanzi bize ku Nyundo
-                    </p>
-                    <p class="blog-description">
-                        It is a long established fact that a reader will be distracted by the readable
-                        content of a page when looking at its layout. The point of using Lorem Ipsum is
-                        that it has a more-or-less normal distribution of letters, as opposed to using
-                        'Content here, content here'.... <span class="read-more">Read more<i class="fas fa-angle-double-right"></i></span>
-                    </p>
-                </div>
-            </a>
+            {% endfor %}
         </div>
     </div>
 </section>
@@ -313,23 +282,23 @@
         <div class="col-right">
             <h4 class="form-description">Fill the form below and send a message. Our team well reach out you as soon
                 as possible</h4>
-            <form action="">
-                <div class="half-form-elements">
-                    <input class="form-control" type="text" placeholder="First name">
-                    <input class="form-control" type="text" placeholder="Last name">
-                </div>
-                <div class="half-form-elements">
-                    <input class="form-control" type="text" placeholder="Email address">
-                    <input class="form-control" type="text" placeholder="Phone number">
-                </div>
-                <div class="full-form-elements">
-                    <textarea class="form-control" name="" id="" cols="30" rows="5"
-                        placeholder="Type your message"></textarea>
-                </div>
-                <div class="half-form-elements">
-                    <input class="submit-btn btn-green form-control" type="submit" value="Send your message">
-                </div>
-            </form>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="half-form-elements">
+                        {{form.first_name}}
+                        {{form.last_name}}
+                    </div>
+                    <div class="half-form-elements">
+                        {{form.email}}
+                        {{form.phone_number}}
+                    </div>
+                    <div class="full-form-elements">
+                        {{form.client_message}}
+                    </div>
+                    <div class="half-form-elements">
+                        <input class="submit-btn btn-green form-control" type="submit" value="Send your message">
+                    </div>
+                </form>
         </div>
     </div>
 </section>

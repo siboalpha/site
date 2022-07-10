@@ -388,6 +388,11 @@ section {
     border-radius: 5px;
     border: 1px solid #192a3dbc;
     margin-bottom: 10px;
+    div {
+        p {
+            margin-bottom: 15px;
+        }
+    }
 
     &::placeholder {
         font-family: 'Barlow Semi Condensed', sans-serif;
@@ -470,11 +475,22 @@ section {
             display: grid;
             grid-template-columns: 46% 46%;
             justify-content: space-between;
+
+            div {
+                p {
+                    margin-bottom: 15px;
+                }
+            }
         }
 
         .full-form-elements {
             display: grid;
             width: 100%;
+            div {
+                p {
+                    margin-bottom: 15px;
+                }
+            }
         }
     }
 }
@@ -492,7 +508,6 @@ section {
     min-width: 250px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    margin: 15px;
 }
 
 .dropdown-content a {
@@ -799,7 +814,7 @@ section {
 
                     .blog-title {
                         font-weight: bold;
-                        text-align: start;
+        
                     }
 
                     .blog-description {

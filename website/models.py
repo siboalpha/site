@@ -43,11 +43,6 @@ class GettingInvolvedLead(models.Model):
     email = models.EmailField(max_length=40)
     phone_number = models.CharField(max_length=40)
     category = models.CharField(max_length=255, choices=GETTING_INVOLVED_CHOICES, default=Financially)
-    education = models.CharField(max_length=255)
-    experience = models.CharField(max_length=255)
-    college = models.CharField(max_length=255)
-    expectations = models.TextField(max_length=500)
-    cv = models.FileField(upload_to='documents/%Y/%m/%d')
 
     def __str__(self):
         return self.first_name

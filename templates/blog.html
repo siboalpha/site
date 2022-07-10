@@ -16,44 +16,19 @@
     <div class="container">
         <h1 class="heading">Blog</h1>
         <div class="blogs">
-            <div class="blog">
-                <img src="/img/00-story-protest.jpg" alt="">
-                <p class="blog-title">
-                    Umuryango Imbonizarwo wahuje abahanzi bize ku Nyundo
-                </p>
-                <p class="blog-description">
-                    It is a long established fact that a reader will be distracted by the readable 
-                    content of a page when looking at its layout. The point of using Lorem Ipsum is 
-                    that it has a more-or-less normal distribution of letters, as opposed to using 
-                    'Content here, content here'.... <span class="read-more">Read more</span>
-                </p>
-            </div>
-
-            <div class="blog">
-                <img src="/img/00-story-protest.jpg" alt="">
-                <p class="blog-title">
-                    Umuryango Imbonizarwo wahuje abahanzi bize ku Nyundo
-                </p>
-                <p class="blog-description">
-                    It is a long established fact that a reader will be distracted by the readable 
-                    content of a page when looking at its layout. The point of using Lorem Ipsum is 
-                    that it has a more-or-less normal distribution of letters, as opposed to using 
-                    'Content here, content here'.... <span class="read-more">Read more</span>
-                </p>
-            </div>
-
-            <div class="blog">
-                <img src="/img/00-story-protest.jpg" alt="">
-                <p class="blog-title">
-                    Umuryango Imbonizarwo wahuje abahanzi bize ku Nyundo
-                </p>
-                <p class="blog-description">
-                    It is a long established fact that a reader will be distracted by the readable 
-                    content of a page when looking at its layout. The point of using Lorem Ipsum is 
-                    that it has a more-or-less normal distribution of letters, as opposed to using 
-                    'Content here, content here'.... <span class="read-more">Read more</span>
-                </p>
-            </div>
+            {% for blog in blogs %}
+            <a href="{% url 'single-blog' blog.id %}">
+                <div class="blog">
+                    <img src="{% static 'img/imbonizarwo members chatting.jpg' %}" alt="">
+                    <p class="blog-title">
+                        {{blog.title}}
+                    </p>
+                    <p class="blog-description">
+                        {{blog.excerpt}}... <span class="read-more">Read more <i class="fas fa-angle-double-right"></i></span>
+                    </p>
+                </div>
+            </a>
+            {% endfor %}
         </div>
     </div>
 </section>

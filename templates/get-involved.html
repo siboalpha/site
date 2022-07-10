@@ -42,20 +42,21 @@
 
         <div class="col-right">
             <h4 class="form-description">Fill the form below and send a message. Our team well reach out you as soon as possible</h4>
-            <form action="">
+            <form action="" method="POST">
+                {% csrf_token %}
                 <div class="half-form-elements">
-                        <input class="form-control" type="text" placeholder="First name">
-                        <input class="form-control" type="text" placeholder="Last name">
+                    {{form.first_name}}
+                    {{form.last_name}}
                 </div>
                 <div class="half-form-elements">
-                        <input class="form-control" type="text" placeholder="Email address">
-                        <input class="form-control" type="text" placeholder="Phone number">
+                    {{form.email}}
+                    {{form.phone_number}}
                 </div>
                 <div class="full-form-elements">
-                        <textarea class="form-control" name="" id="" cols="30" rows="5" placeholder="Type your message"></textarea>
+                    {{form.category}}
                 </div>
-                    <div class="half-form-elements">
-                        <input class="submit-btn btn-green form-control" type="submit" value="Send your message">
+                <div class="half-form-elements">
+                    <input class="submit-btn btn-green form-control" type="submit" value="Send your message">
                 </div>
             </form>
         </div>
@@ -71,7 +72,7 @@
             when an unknown printer took a galley of type and scrambled it to make a 
             type specimen book.
         </p>
-        <a href="#" class="btn btn-green">Become a member</a>
+        <a href="{% url 'volunteers' %}" class="btn btn-green">Become a member</a>
     </div>
 </section>
 {% endblock %}

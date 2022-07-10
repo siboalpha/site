@@ -12,12 +12,13 @@ from django.template.loader import render_to_string
 
 maintenance = False
 def home(request):
-    blog = Blog.objects.all()
-    paginator = Paginator(blog, 3)
+    page_obj = Blog.objects.all()
+    paginator = Paginator( page_obj, 3)
     page_number = request.GET.get('page')
-    page_obj = paginator.get_page(page_number)
+    blogs = paginator.get_page(page_number)
+    print(blogs)
     form = ContactFormMessageForm()
-    context = {'form':form, 'page_obj': page_obj}
+    context = {'form':form, 'blogs': blogs}
     if request.method == 'POST':
         form  =  ContactFormMessageForm(request.POST)
         if form.is_valid():
@@ -147,5 +148,10 @@ def login(request):
 
 def applicationComplete(request):
     return render(request, 'application-complete.html')
+
+def gallery (request):
+    return render(request, 'gallery.html')
+
+
 def thankYou(request):
     return render(request, 'thank-you.html')
