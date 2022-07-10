@@ -3,4 +3,3 @@ venv/
 DjangoApp/.env
 db.sqlite3
 configurations.txt
-manage.py

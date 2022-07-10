@@ -44,11 +44,12 @@ header {
         text-align: start;
 
         .container {
-            
+
             .breaking-news-content {
                 .breaking-news-title {
                     font-weight: bold;
                 }
+
                 a {
                     color: white;
                     text-decoration: underline;
@@ -122,7 +123,7 @@ header {
         .login {
             border: 1px solid var(--offwhite);
         }
-        
+
 
     }
 }
@@ -230,7 +231,7 @@ nav {
     }
 
     .hamburger {
-        margin-top: -20px;
+        margin-top: 20px;
         display: block;
         position: absolute;
         cursor: pointer;
@@ -336,6 +337,7 @@ button {
     border-radius: 5px;
     font-size: 16px;
 }
+
 .btn {
     border: none;
     padding-top: 20;
@@ -344,6 +346,7 @@ button {
     font-size: 16px;
     cursor: pointer;
 }
+
 .btn-blue {
     background-color: var(--dark-blue);
     color: white;
@@ -429,54 +432,18 @@ section {
 
 // PAGE HEADER SECTION
 .heading-section {
-    background: url("/static/img/Imbonizarw\ music\ band\ on\ stage.JPG");
+    background: url("/static/img/imbonizarwo\ theatre\ and\ music\ band.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: top center;
     background-color: #192a3dc5;
     background-blend-mode: overlay;
-    padding: 0;
+    padding: 150px 5vw 50px 5vw;
+    color: whitesmoke;
 
     .container {
-        padding: 250px 0 0 0;
         width: 100%;
-
-        .col-left {
-            .breadcums {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 10px;
-                font-size: 24px;
-                text-transform: capitalize;
-                .link {
-                    color: var(--green);
-                    text-decoration: underline;
-
-                    &:hover {
-                        color: white;
-                        text-decoration: none;
-                    }
-                }
-                .breadcum-icon-blue {
-                    display: none;
-                }
-                .breadcum-icon-white {
-                    width: 24px;
-                }
-                .page {
-                    color: white;
-                }
-            }
-
-            .heading-content {
-                margin-top: 100px;
-                background-color: white;
-                padding: 30px;
-            }
-        }
-
-        .col-right {
-            display: none;
+        .heading {
+            color: white;
         }
     }
 }
@@ -484,64 +451,34 @@ section {
 //PAGE HEADER TABLT STYLES
 @media screen and (min-width: 540px) {
     .heading-section {
-        .container {
-            width: 100vw;
-            padding: 0;
-            display: grid;
-            grid-template-columns: 50% 50%;
-            .col-left {
-                background-color: white;
-                padding-top: 250px;
-                padding-left: 10vw;
-                padding-bottom: 100px;
-                padding-right: 50px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-start;
-                text-align: start;
-
-                .breadcums {
-                    .breadcum-icon-blue {
-                        display: block;
-                        width: 16px;
-                    }
-                    .breadcum-icon-white {
-                        display: none;
-                    }
-                    .page {
-                        color: #192a3d;
-                    }
-                }
-                .heading-content {
-                    margin-top: 0;
-                    padding: 0;
-                }
-            }
-            .col-right{
-                display: block;
-                .empty {
-                    opacity: 0;
-                }
-            }
-        }
+        padding: 150px 15vw 50px 15vw;
     }
 }
 
+//PAGE HEADER TABLT STYLES
+@media screen and (min-width: 780px) {
+    .heading-section {
+        padding: 150px 25vw 50px 25vw;
+    }
+}
+
+
 //FORM DESKTOP
-@media screen and (min-width: 540px){
+@media screen and (min-width: 540px) {
     form {
         .half-form-elements {
             display: grid;
             grid-template-columns: 46% 46%;
             justify-content: space-between;
         }
+
         .full-form-elements {
             display: grid;
             width: 100%;
         }
     }
 }
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -555,6 +492,7 @@ section {
     min-width: 250px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    margin: 15px;
 }
 
 .dropdown-content a {
@@ -583,6 +521,7 @@ section {
     background-position: center;
     background-color: #192a3dbc;
     background-blend-mode: overlay;
+
     .container {
         width: 100%;
         //padding: 100px 0 50px 0;
@@ -626,19 +565,24 @@ section {
                     }
                 }
             }
+
             .imboni-video {
                 display: none;
                 width: 80vw;
                 position: absolute;
                 top: 0;
-                transition: 1s;
+                transition: ease-in-out 0.3s;
                 text-align: start;
+
                 img {
                     width: 32px;
                 }
+
                 margin-bottom: 20px;
+
                 .video {
                     position: relative;
+
                     iframe {
                         height: 200px;
                     }
@@ -653,21 +597,25 @@ section {
                 margin: 20px;
                 padding: 30px;
                 border-radius: 10px;
+
                 .updates-list {
                     margin-top: 30px;
+
                     li {
                         a {
                             display: flex;
                             gap: 10px;
+
                             img {
                                 width: 30px;
                             }
+
                             color: #181818;
                         }
                     }
                 }
             }
-            
+
         }
     }
 }
@@ -675,7 +623,7 @@ section {
 // ABOUT SECTION
 
 .about-us {
-    background: url("/static/img/Imbonizarwo\ members.jpg");
+    background: url("/static/img/00-story-protest.jpg");
     background-position: center;
     background-size: cover;
     position: relative;
@@ -735,7 +683,7 @@ section {
 
 //PROGRAMS SECTION
 .programs {
-    background: url("/static/img/imbonizarwo\ members\ chatting.jpg");
+    background: url("/static/img/Imbonizarwo\ students\ benefiriaries.jpg");
     background-position: center;
     background-size: cover;
     position: relative;
@@ -754,15 +702,20 @@ section {
                 background-color: #f2f5f7e4;
                 padding: 30px;
                 border-radius: 5px;
+
+                p {
+                    margin-bottom: 20px;
+                }
+                
             }
         }
 
     }
 }
 
-//CAMPAIGNS
+//stories
 
-.campaigns {
+.stories {
     .container {
         .col-left {
             button {
@@ -772,20 +725,27 @@ section {
 
         .col-right {
             margin-top: 50px;
-
-            .campaign-card {
+            .story-card {
                 display: grid;
                 gap: 20px;
 
-                .campaign {
-                    position: relative;
-
-                    .campaign-title {
-                        position: absolute;
-                        bottom: 20px;
-                        left: 20px;
-                        color: var(--offwhite);
-                    }
+                .story {
+                    padding: 30px;
+                    border-radius: 5px;
+                    color: white;
+                }
+                .first {
+                    background-color: #192a3d;
+                    
+                }
+                .second {
+                    background-color: #23a455;
+                }
+                .third {
+                    background-color: #192a3d;
+                }
+                .fourth {
+                    background-color: #23a455;
                 }
             }
         }
@@ -795,8 +755,8 @@ section {
 //GET INVOLVED
 
 .get-involved {
-    background: url("/static/img/Imbonizarwo\ music\ band\ jabo.jpg");
-    background-position: center;
+    background: url("/static/img/imbonizarwo\ on\ umuganda.jpg");
+    background-position: top center;
     background-size: cover;
     position: relative;
     background-color: #192a3da9;
@@ -818,8 +778,10 @@ section {
         .blogs {
             display: grid;
             gap: 20px;
+
             a {
                 color: #192a3d;
+
                 .blog {
                     background-color: var(--offwhite);
                     display: flex;
@@ -827,19 +789,19 @@ section {
                     justify-content: space-between;
                     gap: 10px;
                     border-radius: 5px;
-    
+
                     img {
                         height: 100px;
                         width: 150px;
                         object-fit: cover;
                         border-radius: 5px;
                     }
-    
+
                     .blog-title {
                         font-weight: bold;
                         text-align: start;
                     }
-    
+
                     .blog-description {
                         display: none;
                     }
@@ -984,7 +946,6 @@ footer {
 
 }
 
-
 //TABLET SRYLES
 @media screen and (min-width: 540px) {
     .hero-section {
@@ -993,25 +954,30 @@ footer {
             flex-direction: row;
             align-items: center;
             gap: 50px;
-            padding: 150px 0 ;
+            padding: 150px 0;
+
             .col-left {
                 text-align: start;
                 width: 50%;
                 background: none;
+
                 h1 {
                     font-size: 40px;
                     color: whitesmoke;
                 }
+
                 p {
                     font-size: 22px;
                     color: whitesmoke;
                 }
+
                 .call-to-action {
                     flex-direction: row;
 
                     .wath-video {
                         color: whitesmoke;
                         font-size: 50px;
+
                         span {
                             font-size: 20px;
                         }
@@ -1025,30 +991,36 @@ footer {
                     top: -100px;
                     transition: display 0.5s;
                     text-align: start;
+
                     img {
                         width: 32px;
                     }
+
                     margin-bottom: 20px;
+
                     .video {
                         position: relative;
+
                         iframe {
                             height: 400px;
                         }
                     }
                 }
             }
+
             .col-right {
                 width: 50%;
             }
         }
     }
-    
+
     //PROJECTS
     .projects {
         .container {
-            .col-right{
+            .col-right {
                 .projects-card {
                     grid-template-columns: 50% 50%;
+
                     .project {
                         .project-title {
                             top: 200px;
@@ -1070,13 +1042,20 @@ footer {
     }
 
 
-    //CAMPAIGNS
+    //stories
 
-    .campaigns {
+    .stories {
         .container {
             .col-right {
-                .campaign-card {
-                    grid-template-columns: 32% 32% 32%;
+                width: 50%;
+                .story-card {
+                    grid-template-columns: 44.5% 44.5%;
+                    .third {
+                        background-color: #23a455;
+                    }
+                    .fourth {
+                        background-color: #192a3d;
+                    }
                 }
             }
         }
@@ -1112,15 +1091,18 @@ footer {
         height: 100vh;
         padding: 0;
         padding-top: 120px;
-        .container {  
-            .col-left{
-                h1{
+
+        .container {
+            .col-left {
+                h1 {
                     font-size: 60px;
                     font-weight: bold;
                 }
             }
+
             .col-right {
                 padding-left: 50px;
+
                 .updates {
                     margin: 0;
                 }
@@ -1143,24 +1125,30 @@ footer {
     .projects {
         .container {
             display: flex;
-            gap: 100px;
+            gap: 50px;
             align-items: center;
+
             .col-left {
-                width: 50%;
+                width: 40%;
                 text-align: start;
+
                 p {
                     margin-right: 25%;
                 }
+
                 button {
                     display: block;
                 }
 
             }
-            .col-right{
-                width: 50%;
+
+            .col-right {
+                width: 60%;
+
                 .projects-card {
                     grid-template-columns: 46% 46%;
                     justify-content: end;
+
                     .project {
                         .project-title {
                             top: 200px;
@@ -1184,21 +1172,24 @@ footer {
         }
     }
 
-    //CAMPAIGNS
+    //stories
 
-    .campaigns {
+    .stories {
         .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap:100px;
+            gap: 100px;
+
             .col-left {
-                width: 50%;
+                width: 40%;
                 text-align: start;
             }
+
             .col-right {
-                width: 50%;
-                .campaign-card {
+                width: 60%;
+
+                .story-card {
                     grid-template-columns: 48% 48%;
                     justify-content: space-between;
                 }
@@ -1220,27 +1211,31 @@ footer {
         .container {
             .blogs {
                 grid-template-columns: 32% 32% 32%;
+
                 a {
                     .blog {
                         flex-direction: column;
+
                         img {
                             width: 100%;
                             height: 200px;
                         }
+
                         .blog-title {
                             margin: 0 20px;
                         }
+
                         .blog-description {
                             display: block;
                             text-align: start;
                             margin: 0 20px 20px 20px;
-    
+
                             span {
                                 color: var(--green);
                                 text-decoration: underline;
                             }
                         }
-    
+
                     }
                 }
             }
@@ -1253,8 +1248,9 @@ footer {
         .container {
             .partners-card {
                 margin-bottom: 50px;
+
                 .partner-logo {
-                    grid-template-columns: 23% 23% 23% 23%;
+                    grid-template-columns: 17% 17% 17% 17% 17%;
                     justify-content: space-between;
                 }
             }
@@ -1267,13 +1263,16 @@ footer {
         .container {
             display: flex;
             gap: 50px;
+
             .col-left {
                 width: 50%;
                 text-align: start;
-                .contact-icons{
+
+                .contact-icons {
                     padding-top: 20PX;
                     align-items: flex-start;
                     gap: 10px;
+
                     a {
                         i {
                             font-size: 24px;
@@ -1281,9 +1280,11 @@ footer {
                     }
                 }
             }
+
             .col-right {
                 width: 50%;
                 padding: 0;
+
                 .form-description {
                     display: none;
                 }
@@ -1295,24 +1296,30 @@ footer {
 
     footer {
         text-align: start;
+
         .container {
             display: grid;
             grid-template-columns: 49% 49%;
+
             .social-media {
                 background: var(--dark-blue);
+
                 .social-icons {
                     justify-content: start;
                 }
             }
+
             .important-links {
                 padding: 0;
                 background-color: #18181800;
+
                 ol {
                     flex-direction: row;
                     justify-content: start;
                     gap: 10px;
                 }
             }
+
             .footer-blog {
                 padding: 0;
             }
@@ -1326,6 +1333,7 @@ footer {
 .our-history {
     background-color: whitesmoke;
 }
+
 
 // DOCUMENTATION SECTION
 .documentation {
@@ -1346,6 +1354,7 @@ footer {
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
+
                     li {
                         a {
                             margin-left: 20px;
@@ -1361,14 +1370,16 @@ footer {
 //BECOME A MEMBER SECTION
 
 .member {
-    background: url("/static/img/Imbonizarw\ music\ band\ on\ stage.JPG");
-    background-position: center;
+    background: url("/static/img/Imbonizarwo\ members\ at\ nyanza!.jpg");
+    background-position: top center;
     background-size: cover;
     background-color: #192a3dd3;
     background-blend-mode: overlay;
     color: white;
 
     .container {
+        padding-top: 150px;
+        padding-top: 150px;
         p {
             margin-bottom: 40px;
         }
@@ -1380,10 +1391,12 @@ footer {
 
 .social-media {
     background-color: var(--offwhite);
+
     .container {
         p {
             margin-bottom: 30px;
         }
+
         .social-media-list {
             display: grid;
             grid-template-columns: 50% 50%;
@@ -1406,12 +1419,14 @@ footer {
             display: flex;
             flex-direction: column;
             gap: 20px;
+
             .card {
                 background-color: whitesmoke;
                 padding: 30px;
                 border-radius: 5px;
             }
         }
+
         .col-right {
             display: none;
         }
@@ -1429,13 +1444,16 @@ footer {
             .team-member {
                 margin-bottom: 20px;
                 text-align: start;
+
                 .member-name {
                     font-size: 16px;
                     font-weight: bold;
                 }
+
                 .member-social-icons {
                     display: flex;
                     gap: 10px;
+
                     a {
                         color: var(--dark-blue);
                     }
@@ -1446,7 +1464,8 @@ footer {
 }
 
 //ABOUT US TABLET STYLES
-@media screen and (min-width: 760px){
+@media screen and (min-width: 760px) {
+
     //HISTORY SECTION
     .our-history {
         .container {
@@ -1456,6 +1475,7 @@ footer {
             }
         }
     }
+
     // DOCUMENTATION SECTION
 
     .documentation {
@@ -1463,6 +1483,7 @@ footer {
             .documents-categorties {
                 flex-direction: row;
                 justify-content: space-between;
+
                 .document-category {
                     padding: 50px;
                 }
@@ -1485,6 +1506,7 @@ footer {
             p {
                 margin: 0 20vw;
             }
+
             .social-media-list {
                 margin-top: 50px;
                 grid-template-columns: 20% 20% 20% 20% 20%;
@@ -1498,15 +1520,17 @@ footer {
             display: flex;
             align-items: center;
             gap: 100px;
+
             .col-left {
                 .card {
                     padding: 40px;
                     text-align: start;
                 }
             }
+
             .col-right {
                 display: block;
-                
+
                 img {
                     border-radius: 100px 0 100px 0;
                 }
@@ -1522,9 +1546,11 @@ footer {
 
                 .team-member {
                     margin-bottom: 30px;
+
                     .member-name {
                         font-size: 20px;
                     }
+
                     .member-social-icons {
                         margin-top: 10px;
                     }
@@ -1536,7 +1562,7 @@ footer {
 
 //LOGIN PAGE
 .login-section {
-    background: url("/static/img/Imbonizarwo\ members\ dancing\ traditionally.jpg");
+    background: url("/static/img/Music-In-Africa-Live-scaled.jpg");
     background-position: center;
     background-size: cover;
     background-color: #192a3db5;
@@ -1561,13 +1587,14 @@ footer {
 
 //LOGIN PAGE TABLES STYLES
 
-@media screen and (min-width: 760px){
+@media screen and (min-width: 760px) {
     .login-section {
         .container {
             width: 50vw;
         }
     }
 }
+
 @media screen and (min-width: 960px) {
     .login-section {
         .container {
@@ -1586,10 +1613,11 @@ footer {
                 font-size: 28px;
                 margin-bottom: 30px;
             }
+
             .help-cards {
                 display: flex;
                 flex-direction: column;
-                gap:30px;
+                gap: 30px;
 
                 .help-card {
                     background-color: white;
@@ -1618,9 +1646,11 @@ footer {
             display: grid;
             grid-template-columns: 50% 50%;
             gap: 100px;
+
             .col-left {
                 text-align: start;
             }
+
             .col-right {
                 .form-description {
                     display: none;
@@ -1629,6 +1659,7 @@ footer {
         }
     }
 }
+
 // ADD BLOG PAGE
 
 .add-blog-form {
@@ -1650,13 +1681,14 @@ footer {
 
         .social-media {
             background-color: white;
+
             .social-media-icons {
                 display: flex;
                 gap: 20px;
                 align-items: center;
                 justify-content: center;
 
-                a{
+                a {
                     color: #192a3d;
                     font-size: 36px;
                 }
@@ -1689,10 +1721,11 @@ footer {
 
 .head-seaction {
     height: 400px;
-    background: url("/static/img/Alice.jpg");
+    background: url("/static/img/Music-In-Africa-Live-scaled.jpg");
     background-size: cover;
     background-position: center;
 }
+
 .application-form {
     margin: -100px 20px 0 20px;
     background-color: whitesmoke;
@@ -1705,12 +1738,14 @@ footer {
 
     form {
         margin-top: 30px;
-        .half-form-elements, .full-form-elements {
+
+        .half-form-elements,
+        .full-form-elements {
             width: 86%;
             margin-top: 30px;
         }
     }
-    }
+}
 
 //VOLUNTEERING APPLICATION FORM
 
@@ -1718,13 +1753,18 @@ footer {
     .head-seaction {
         height: 600px;
     }
+
     .application-form {
         margin: -200px 200px 0 200px;
         padding: 50px;
-        .container{
+
+        .container {
             width: auto;
+
             form {
-                .half-form-elements, .full-form-elements {
+
+                .half-form-elements,
+                .full-form-elements {
                     width: 95%;
                 }
             }
@@ -1737,6 +1777,7 @@ footer {
 .top-section {
     margin: 0;
     padding: 0;
+
     .featured-full-image {
         width: auto;
         height: 400px;
@@ -1745,14 +1786,18 @@ footer {
 
 .content-section {
     text-align: start;
+
     .container {
         width: 90%;
-        .featured-image{
+
+        .featured-image {
             display: none;
         }
+
         .title {
             font-size: 20px;
         }
+
         .credits {
             display: flex;
             justify-content: start;
@@ -1783,7 +1828,8 @@ footer {
     .top-section {
         z-index: 0;
         margin-bottom: -350px;
-        .featured-full-image{
+
+        .featured-full-image {
             width: 100%;
             height: fit-content;
             opacity: 0.5;
@@ -1794,13 +1840,14 @@ footer {
     .content-section {
         z-index: 2;
         position: relative;
+
         .container {
             .featured-image {
                 display: block;
             }
         }
     }
-    
+
 }
 
 // SINGLE BLOG DESTOP STYLES
@@ -1811,8 +1858,138 @@ footer {
             height: 600px;
         }
     }
+
     .content-section {
         margin: auto;
         width: 900px;
     }
 }
+
+//GALLERY
+
+/*
+ CSS for the main interaction
+*/
+.tabset>input[type="radio"] {
+    position: absolute;
+    left: -200vw;
+}
+
+.tabset .tab-panel {
+    display: none;
+}
+
+.tabset>input:first-child:checked~.tab-panels>.tab-panel:first-child,
+.tabset>input:nth-child(3):checked~.tab-panels>.tab-panel:nth-child(2),
+.tabset>input:nth-child(5):checked~.tab-panels>.tab-panel:nth-child(3),
+.tabset>input:nth-child(7):checked~.tab-panels>.tab-panel:nth-child(4),
+.tabset>input:nth-child(9):checked~.tab-panels>.tab-panel:nth-child(5),
+.tabset>input:nth-child(11):checked~.tab-panels>.tab-panel:nth-child(6) {
+    display: block;
+}
+
+//GALLERY
+
+.gallery {
+    text-align: start;
+    .container {
+        .tabset>input[type="radio"] {
+            position: absolute;
+            left: -200vw;
+        }
+
+        .tabset .tab-panel {
+            display: none;
+        }
+
+        .tabset>input:first-child:checked~.tab-panels>.tab-panel:first-child,
+        .tabset>input:nth-child(3):checked~.tab-panels>.tab-panel:nth-child(2),
+        .tabset>input:nth-child(5):checked~.tab-panels>.tab-panel:nth-child(3),
+        .tabset>input:nth-child(7):checked~.tab-panels>.tab-panel:nth-child(4),
+        .tabset>input:nth-child(9):checked~.tab-panels>.tab-panel:nth-child(5),
+        .tabset>input:nth-child(11):checked~.tab-panels>.tab-panel:nth-child(6) {
+            display: block;
+        }
+
+        body {
+            font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+            color: #333;
+            font-weight: 300;
+        }
+
+        .tabset>label {
+            position: relative;
+            display: inline-block;
+            padding: 15px 15px 25px;
+            border: 1px solid transparent;
+            border-bottom: 0;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .tabset>label::after {
+            content: "";
+            position: absolute;
+            left: 15px;
+            bottom: 10px;
+            width: 22px;
+            height: 4px;
+            background: #8d8d8d;
+        }
+
+        .tabset>label:hover,
+        .tabset>input:focus+label {
+            color: #23a455;
+        }
+
+        .tabset>label:hover::after,
+        .tabset>input:focus+label::after,
+        .tabset>input:checked+label::after {
+            background: #23a455;
+        }
+
+        .tabset>input:checked+label {
+            border-color: #ccc;
+            border-bottom: 1px solid #fff;
+            margin-bottom: -1px;
+        }
+
+        .tab-panel {
+            padding: 30px 0;
+            border-top: 1px solid #ccc;
+            .tab-content {
+                display: grid;
+                grid-template-columns: 48% 48%;
+                justify-content: space-between;
+                img {
+                    width: 100%;
+                    height: 150px;
+                    object-fit: cover;
+                    margin-bottom: 10px;
+                }
+            }
+            
+        }
+
+        @media screen and (min-width: 540px) {
+            .tab-panel {
+                .tab-content {
+                    grid-template-columns: 32.5% 32.5% 32.5%;
+                    img {
+                        height: 200px;
+                    }
+                }
+            }
+        }
+
+        @media screen and (min-width: 780px) {
+            .tab-panel {
+                .tab-content {
+                    grid-template-columns: 24.5% 24.5% 24.5% 24.5%;
+                    img {
+                        height: 250px;
+                    }
+                }
+            }
+        }
+    }}
