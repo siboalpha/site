@@ -13,10 +13,13 @@ from django.template.loader import render_to_string
 maintenance = False
 def home(request):
     page_obj = Blog.objects.all()
-    paginator = Paginator( page_obj, 3)
+    paginator = Paginator( page_obj, 3, allow_empty_first_page=True)
     page_number = request.GET.get('page')
     blogs = paginator.get_page(page_number)
 
+    important_updates_obj = ImportantUpdate.objects.all()
+    paginator = Paginator(important_updates_obj, 6, allow_empty_first_page=True)
+    page_number = request.GET.get('page')
     imporntant_updates = ImportantUpdate.objects.all()
     form = ContactFormMessageForm()
     context = {'form':form, 'blogs': blogs, 'imporntant_updates': imporntant_updates}
