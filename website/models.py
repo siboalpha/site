@@ -15,6 +15,9 @@ class Blog(models.Model):
     def blog_title(self):
         return self.title[0:50]+"..."
 
+    class Meta:
+        ordering = ['id']
+
 class ContactFormMessage(models.Model):
     date_sent = models.DateTimeField(default=timezone.now)
     first_name = models.CharField(max_length=40)
@@ -93,3 +96,6 @@ class Volunteer(models.Model):
 class ImportantUpdate(models.Model):
     title = models.CharField(max_length=255)
     update_link = models.URLField(max_length=255)
+
+    class Meta:
+        ordering = ['id']
