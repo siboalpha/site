@@ -50,7 +50,6 @@ def home(request):
 
 def about(request):
     official_documents = OfficialDocument.objects.all()
-    print(official_documents)
     context = {'official_documents': official_documents}
     if maintenance:
         return render(request, 'maintenance.html')

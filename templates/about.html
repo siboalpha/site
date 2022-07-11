@@ -55,36 +55,33 @@
             <div class="document-category">
                 <h4 class="category-title">Legal Personality</h4>
                 <ol class="ducuments-category-list">
-                    <li><i class="fas fa-file-pdf"></i> Legal document file<a class="document-link" href="#"><i class="fas fa-cloud-download-alt"></i></a></li>
-                    <li><i class="fas fa-file-pdf"></i> Legal document file<a class="document-link" href="#"><i class="fas fa-cloud-download-alt"></i></a></li>
-                    <li><i class="fas fa-file-pdf"></i> Legal document file<a class="document-link" href="#"><i class="fas fa-cloud-download-alt"></i></a></li>
-                    <li><i class="fas fa-file-pdf"></i> Legal document file<a class="document-link" href="#"><i class="fas fa-cloud-download-alt"></i></a></li>
-                    <li><i class="fas fa-file-pdf"></i> Legal document file<a class="document-link" href="#"><i class="fas fa-cloud-download-alt"></i></a></li>
-                    <li><i class="fas fa-file-pdf"></i> Legal document file<a class="document-link" href="#"><i class="fas fa-cloud-download-alt"></i></a></li>
+                    {% for official_document in official_documents %}
+                        {% if official_document.category == 'Legal Personality' %}
+                    <li><i class="fas fa-file-pdf"></i>{{official_document.title}}<a class="document-link" href="{{official_document.document_file.url}}" target="_blank"><i class="fas fa-cloud-download-alt"></i></a></li>
+                        {% endif %}
+                    {% endfor %}
                 </ol>
             </div>
 
             <div class="document-category">
                 <h4 class="category-title">Ministerial Collaboration</h4>
                 <ol class="ducuments-category-list">
-                    <li><i class="fas fa-file-pdf"></i> Ministerial Collaboration file<a class="document-link" href="#"><i class="fas fa-cloud-download-alt"></i></a></li>
-                    <li><i class="fas fa-file-pdf"></i> Ministerial Collaboration file<a class="document-link" href="#"><i class="fas fa-cloud-download-alt"></i></a></li>
-                    <li><i class="fas fa-file-pdf"></i> Ministerial Collaboration file<a class="document-link" href="#"><i class="fas fa-cloud-download-alt"></i></a></li>
-                    <li><i class="fas fa-file-pdf"></i> Ministerial Collaboration file<a class="document-link" href="#"><i class="fas fa-cloud-download-alt"></i></a></li>
-                    <li><i class="fas fa-file-pdf"></i> Ministerial Collaboration file<a class="document-link" href="#"><i class="fas fa-cloud-download-alt"></i></a></li>
-                    <li><i class="fas fa-file-pdf"></i> Ministerial Collaboration file<a class="document-link" href="#"><i class="fas fa-cloud-download-alt"></i></a></li>
+                    {% for official_document in official_documents %}
+                        {% if official_document.category == 'Ministerial Collaboration' %}
+                            <li><i class="fas fa-file-pdf"></i>{{official_document.title}}<a class="document-link" href="{{official_document.document_file.url}}" target="_blank"><i class="fas fa-cloud-download-alt"></i></a></li>
+                        {% endif %}
+                    {% endfor %}
                 </ol>
             </div>
 
             <div class="document-category">
                 <h4 class="category-title">Signed MOUs</h4>
                 <ol class="ducuments-category-list">
-                    <li><i class="fas fa-file-pdf"></i> Signed MOU file<a class="document-link" href="#"><i class="fas fa-cloud-download-alt"></i></a></li>
-                    <li><i class="fas fa-file-pdf"></i> Signed MOU file<a class="document-link" href="#"><i class="fas fa-cloud-download-alt"></i></a></li>
-                    <li><i class="fas fa-file-pdf"></i> Signed MOU file<a class="document-link" href="#"><i class="fas fa-cloud-download-alt"></i></a></li>
-                    <li><i class="fas fa-file-pdf"></i> Signed MOU file<a class="document-link" href="#"><i class="fas fa-cloud-download-alt"></i></a></li>
-                    <li><i class="fas fa-file-pdf"></i> Signed MOU file<a class="document-link" href="#"><i class="fas fa-cloud-download-alt"></i></a></li>
-                    <li><i class="fas fa-file-pdf"></i> Signed MOU file<a class="document-link" href="#"><i class="fas fa-cloud-download-alt"></i></a></li>
+                    {% for official_document in official_documents %}
+                        {% if official_document.category == 'Signed MOUs' %}
+                            <li><i class="fas fa-file-pdf"></i>{{official_document.title}}<a class="document-link" href="{{official_document.document_file.url}}" target="_blank"><i class="fas fa-cloud-download-alt"></i></a></li>
+                        {% endif %}
+                    {% endfor %}
                 </ol>
             </div>
         </div>
