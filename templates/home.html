@@ -33,14 +33,6 @@
                     {% for imporntant_update in imporntant_updates %}
                     <li><a href="{{imporntant_update.update_link}}" target="_blank"><img src="{% static 'img/icons/notification.gif' %}" alt="">{{imporntant_update.title}}</a></li>
                     {% endfor %}
-                    <!--
-                        <li><a href=""><img src="{% static 'img/icons/notification.gif' %}" alt=""> Imbonizarwo concsrt show</a></li>
-                    <li><a href=""><img src="{% static 'img/icons/notification.gif' %}" alt=""> Imbonizarwo concsrt show</a></li>
-                    <li><a href=""><img src="{% static 'img/icons/notification.gif' %}" alt=""> Imbonizarwo concsrt show</a></li>
-                    <li><a href=""><img src="{% static 'img/icons/notification.gif' %}" alt=""> Imbonizarwo concsrt show</a></li>
-                    <li><a href=""><img src="{% static 'img/icons/notification.gif' %}" alt=""> Imbonizarwo concsrt show</a></li>
-                    <li><a href=""><img src="{% static 'img/icons/notification.gif' %}" alt=""> Imbonizarwo concsrt show</a></li>
-                    -->
                 </ol>
             </div>
         </div>
@@ -122,21 +114,21 @@
                 <p>
                     Enhance primary health care services through campaign of fighting teenage pregnancies, STIs, Sanitation and Drug Abuse in Rwandan community 
                 </p>
-                <a href=""><button class="btn-green">Get involved</button></a>
+                <a href="{% url 'primary-health-care' %}"><button class="btn-green">Get involved</button></a>
             </div>
 
             <div class="program">
                 <p>
                     Promoting the culture of Peace, Unity and Reconciliation Trough Arts/talents, dramatic performance and inter - generation dialogs focusing on History of Rwanda 
                 </p>
-                <a href=""><button class="btn-green">Get involved</button></a>
+                <a href="{% url 'peace-education' %}"><button class="btn-green">Get involved</button></a>
             </div>
 
             <div class="program">
                 <p>
                     Promote learning by doing, through creative arts & talent development for educating and build capacity of young generation through awareness raising campaign 
                 </p>
-                <a href=""><button class="btn-green">Get involved</button></a>
+                <a href="{% url 'art' %}"><button class="btn-green">Get involved</button></a>
                 
             </div>
         </div>
@@ -156,7 +148,7 @@
                 free to contact us if you feel like you want more from our 
                 beneficiaries 
             </p>
-            <button class="btn-green">More stories</button>
+            <a href="#contact"><button class="btn-green">More stories</button></a>
         </div>
 
         <div class="col-right">
@@ -246,7 +238,7 @@
     </div>
 </section>
 
-<section class="get-in-touch">
+<section class="get-in-touch" id="contact">
     <div class="container">
         <div class="col-left">
             <h4 class="sub-heading">How can we help you</h4>

@@ -143,6 +143,18 @@ def  volunteering(request):
         return render(request, 'maintenance.html')
     return render(request, 'volunteers.html', context)
 
+def becomeMember(request):
+    return render(request, 'coming-soon.html')
+
+def primaryHealCare(request):
+    return render(request, 'coming-soon.html')
+
+def peaceEducation(request):
+    return render(request, 'coming-soon.html')
+
+def art(request):
+    return render(request, 'coming-soon.html')
+
 def login(request):
     return render(request, 'login.html')
 

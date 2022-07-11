@@ -62,8 +62,8 @@
                         <li class="dropdown">
                             <a href="{% url 'about' %}" class="dropbtn">About Us</a>
                             <div class="dropdown-content">
-                                <a href="/#projects">Become a member</a>
-                                <a href="/#">Volunteer</a>   
+                                <a href="{% url 'members' %}">Become a member</a>
+                                <a href="{% url 'volunteers' %}">Volunteer</a>   
                             </div>
                             </a>
                         </li>
@@ -97,10 +97,10 @@
             <div class="social-media">
                 <h4 class="title-title">Our Social Media</h4>
                 <div class="social-icons">
-                    <a href="https://twitter.com/imbonizarwo?s=11&t=N0kAftjYVy0BYPOHGiDE5g" class="icon-list">
+                    <a href="https://www.facebook.com/Imbonizarwo/" class="icon-list">
                         <i class="fa fa-facebook-square"></i>
                     </a>
-                    <a href="https://www.facebook.com/Imbonizarwo/" class="icon-list">
+                    <a href="https://twitter.com/imbonizarwo?s=11&t=N0kAftjYVy0BYPOHGiDE5g" class="icon-list">
                         <i class="fa fa-twitter-square"></i>
                     </a>
                     <a href="https://instagram.com/imbonizarwo?igshid=YmMyMTA2M2Y=" class="icon-list">
@@ -114,12 +114,14 @@
             <div class="important-links">
                 <h4 class="title-title">Imprtant links</h4>
                 <ol>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About us</a></li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="">Programs</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Get in touch</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="{% url 'about' %}">About us</a></li>
+                    <li><a href="/#projects">Projects</a></li>
+                    <li><a href="/#programs">Programs</a></li>
+                    <li><a href="{% url 'members' %}">Become a member</a></li>
+                    <li><a href="{% url 'volunteers' %}">Volunteering</a></li>
+                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                    <li><a href="{% url 'contact' %}">Get in touch</a></li>
                 </ol>
             </div>
         </div>

@@ -18,6 +18,10 @@ urlpatterns = [
     path('login/', views.login, name='login'),
 
     path('volunteers/', views.volunteering, name='volunteers'),
+    path('members/', views.becomeMember, name="members"),
+    path('primary-health-care/', views.primaryHealCare, name="primary-health-care"),
+    path('peace-education/', views.peaceEducation, name="peace-education"),
+    path('art/', views.art, name="art"),
 
     path('application-complete', views.applicationComplete, name='application-complete' ),
     path('thank-you/', views.thankYou, name='thank-you'),
