@@ -17,10 +17,7 @@ def home(request):
     page_number = request.GET.get('page')
     blogs = paginator.get_page(page_number)
 
-    important_updates_obj = ImportantUpdate.objects.all()
-    paginator = Paginator(important_updates_obj, 6)
-    page_number = request.GET.get('page')
-    imporntant_updates = paginator.get_page(page_number)
+    imporntant_updates = ImportantUpdate.objects.all()
     form = ContactFormMessageForm()
     context = {'form':form, 'blogs': blogs, 'imporntant_updates': imporntant_updates}
     if request.method == 'POST':
