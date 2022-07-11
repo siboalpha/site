@@ -16,9 +16,13 @@ def home(request):
     paginator = Paginator( page_obj, 3)
     page_number = request.GET.get('page')
     blogs = paginator.get_page(page_number)
-    print(blogs)
+
+    important_updates_obj = ImportantUpdate.objects.all()
+    paginator = Paginator(important_updates_obj, 6)
+    page_number = request.GET.get('page')
+    imporntant_updates = paginator.get_page(page_number)
     form = ContactFormMessageForm()
-    context = {'form':form, 'blogs': blogs}
+    context = {'form':form, 'blogs': blogs, 'imporntant_updates': imporntant_updates}
     if request.method == 'POST':
         form  =  ContactFormMessageForm(request.POST)
         if form.is_valid():
@@ -112,11 +116,7 @@ def singleBlog(request, pk):
 
 def base(request):
     blogs = Blog.objects.all()
-    important_updates = ImportantUpdate.objects.all
-    paginator = Paginator(important_updates, 1)
-    page_number = request.GET.get('page')
-    notifications = paginator.get_page(page_number)
-    context = {'blogs': blogs, 'notifications': notifications}
+    context = {'blogs': blogs}
     return render(request, 'base.html', context)
 
 

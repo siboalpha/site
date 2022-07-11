@@ -30,13 +30,17 @@
             <div class="updates">
                 <h3>Important Updates</h3>
                 <ol class="updates-list">
+                    {% for imporntant_update in imporntant_updates %}
+                    <li><a href="{{imporntant_update.update_link}}" target="_blank"><img src="{% static 'img/icons/notification.gif' %}" alt="">{{imporntant_update.title}}</a></li>
+                    {% endfor %}
+                    <!--
+                        <li><a href=""><img src="{% static 'img/icons/notification.gif' %}" alt=""> Imbonizarwo concsrt show</a></li>
                     <li><a href=""><img src="{% static 'img/icons/notification.gif' %}" alt=""> Imbonizarwo concsrt show</a></li>
                     <li><a href=""><img src="{% static 'img/icons/notification.gif' %}" alt=""> Imbonizarwo concsrt show</a></li>
                     <li><a href=""><img src="{% static 'img/icons/notification.gif' %}" alt=""> Imbonizarwo concsrt show</a></li>
                     <li><a href=""><img src="{% static 'img/icons/notification.gif' %}" alt=""> Imbonizarwo concsrt show</a></li>
                     <li><a href=""><img src="{% static 'img/icons/notification.gif' %}" alt=""> Imbonizarwo concsrt show</a></li>
-                    <li><a href=""><img src="{% static 'img/icons/notification.gif' %}" alt=""> Imbonizarwo concsrt show</a></li>
-                    <li><a href=""><img src="{% static 'img/icons/notification.gif' %}" alt=""> Imbonizarwo concsrt show</a></li>
+                    -->
                 </ol>
             </div>
         </div>
@@ -263,16 +267,16 @@
                 </a>
 
                 <div class="social-icons">
-                    <a href="" class="icon-list">
+                    <a href="https://www.facebook.com/Imbonizarwo/" class="icon-list">
                         <i class="fa fa-facebook-square"></i>
                     </a>
-                    <a href="" class="icon-list">
+                    <a href="https://twitter.com/imbonizarwo?s=11&t=N0kAftjYVy0BYPOHGiDE5g" class="icon-list">
                         <i class="fa fa-twitter-square"></i>
                     </a>
-                    <a href="" class="icon-list">
+                    <a href="https://instagram.com/imbonizarwo?igshid=YmMyMTA2M2Y=" class="icon-list">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="" class="icon-list">
+                    <a href="https://youtube.com/channel/UCpUb64qdUlS9E2bPCRSHc8A" class="icon-list">
                         <i class="fab fa-youtube"></i>
                     </a>
                 </div>
