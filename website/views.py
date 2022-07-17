@@ -146,10 +146,10 @@ def becomeMember(request):
     return render(request, 'coming-soon.html')
 
 def primaryHealCare(request):
-    return render(request, 'coming-soon.html')
+    return render(request, 'primary-health-care-services.html')
 
 def peaceEducation(request):
-    return render(request, 'coming-soon.html')
+    return render(request, 'peace-education.html')
 
 def art(request):
     return render(request, 'coming-soon.html')

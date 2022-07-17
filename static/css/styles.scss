@@ -2008,3 +2008,64 @@ footer {
             }
         }
     }}
+
+    //PEACE EDUCATION
+
+.p-content {
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        P {
+            background-color: whitesmoke;
+            padding: 20px;
+            border-radius: 5px;
+        }
+    }
+}
+
+//PEACE EDUCATION
+
+@media screen and (min-width: 780px) {
+    .p-content {
+        .container {
+            width: 60%;
+            p {
+                padding: 50px;
+            }
+        }
+    }
+}
+
+//PRIMARY HEALTH CARE SERVICES
+
+.p-cards {
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .card {
+            border: 1px #23a455 solid;
+            padding: 20px;
+            border-radius: 5px;
+            a {
+                cursor: pointer;
+                color: #192a3d;
+                .heading {
+                    font-size: 18px;
+               } 
+            }
+        }
+    }
+}
+
+//PRIMARY HEALTH CARE SERVICES DESKTOP STYLES
+
+@media screen and (min-width: 780px) {
+    .p-cards {
+        .container {
+            width: 60%;
+            flex-direction: row;
+        }
+    }
+}
