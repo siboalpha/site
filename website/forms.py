@@ -59,6 +59,6 @@ class VolunteersForm(ModelForm):
             'graduation_country': TextInput(attrs={'class':'form-control', 'placeholder': 'graduation country'}),
             'experience': Textarea(attrs={'class':'form-control', 'placeholder': 'Your Experience'}),
             'consept_note': Textarea(attrs={'class':'form-control', 'placeholder': 'Your Consept'}),
-            'owns_a_computer': TextInput(attrs={'class':'form-control', 'placeholder': 'Yes or No'}),
+            'owns_a_computer': Select(attrs={'class':'form-control', 'placeholder': 'Yes or No'}),
             'cv': FileInput(attrs={'class':'form-control', 'placeholder': 'Yes or No'}),
         }

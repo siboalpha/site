@@ -78,6 +78,14 @@ class Volunteer(models.Model):
         (Pending, 'Pending'),
         (Approved, 'Approved'),
     ]
+
+    Yes = 'Yes'
+    No = 'No'
+
+    PERSONAL_COMPUTER_CHOICES = [
+        (Yes, 'Yes'),
+        (No, 'No')
+    ]
     membership_status = models.CharField(max_length=255, choices=STATUS_CHOICES, default=Pending)
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
@@ -90,7 +98,7 @@ class Volunteer(models.Model):
     graduation_country = models.CharField(max_length=255, null=True)
     experience = models.TextField(max_length=2550, null=True)
     consept_note = models.TextField(max_length=2550, null=True)
-    owns_a_computer = models.TextField(max_length=2550, null=True)
+    owns_a_computer = models.TextField(max_length=2550, choices=PERSONAL_COMPUTER_CHOICES, default=Yes, null=True)
     cv = models.FileField(null=True, upload_to="Applicant's CVs")
 
 class ImportantUpdate(models.Model):

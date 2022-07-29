@@ -531,10 +531,10 @@ section {
 .hero-section {
     padding: 0;
     padding-top: 200px;
-    background: url("/static/img/Imbonziarwo\ music\ band.jpg");
+    background: url("/static/img/heroImage.jpg");
     background-size: cover;
     background-position: center;
-    background-color: #192a3dbc;
+    background-color: #192a3d68;
     background-blend-mode: overlay;
 
     .container {
@@ -774,7 +774,8 @@ section {
     background-position: top center;
     background-size: cover;
     position: relative;
-    background-color: #192a3da9;
+    background-attachment: fixed;
+    background-color: #192a3dd7;
     background-blend-mode: overlay;
     color: var(--offwhite);
 

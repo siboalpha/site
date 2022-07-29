@@ -195,7 +195,7 @@ nav .buttons {
     display: none;
   }
   .hamburger {
-    margin-top: -20px;
+    margin-top: 20px;
     display: block;
     position: absolute;
     cursor: pointer;
@@ -339,6 +339,9 @@ section {
   border: 1px solid rgba(25, 42, 61, 0.737254902);
   margin-bottom: 10px;
 }
+.form-control div p {
+  margin-bottom: 15px;
+}
 .form-control::-moz-placeholder {
   font-family: "Barlow Semi Condensed", sans-serif;
   color: #181818;
@@ -387,89 +390,29 @@ section .container {
 }
 
 .heading-section {
-  background: url("/static/img/Imbonizarw music band on stage.JPG");
+  background: url("/static/img/imbonizarwo theatre and music band.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-color: rgba(25, 42, 61, 0.7725490196);
   background-blend-mode: overlay;
-  padding: 0;
+  padding: 150px 5vw 50px 5vw;
+  color: whitesmoke;
 }
 .heading-section .container {
-  padding: 250px 0 0 0;
   width: 100%;
 }
-.heading-section .container .col-left .breadcums {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  font-size: 24px;
-  text-transform: capitalize;
-}
-.heading-section .container .col-left .breadcums .link {
-  color: var(--green);
-  text-decoration: underline;
-}
-.heading-section .container .col-left .breadcums .link:hover {
+.heading-section .container .heading {
   color: white;
-  text-decoration: none;
-}
-.heading-section .container .col-left .breadcums .breadcum-icon-blue {
-  display: none;
-}
-.heading-section .container .col-left .breadcums .breadcum-icon-white {
-  width: 24px;
-}
-.heading-section .container .col-left .breadcums .page {
-  color: white;
-}
-.heading-section .container .col-left .heading-content {
-  margin-top: 100px;
-  background-color: white;
-  padding: 30px;
-}
-.heading-section .container .col-right {
-  display: none;
 }
 
 @media screen and (min-width: 540px) {
-  .heading-section .container {
-    width: 100vw;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 50% 50%;
+  .heading-section {
+    padding: 150px 15vw 50px 15vw;
   }
-  .heading-section .container .col-left {
-    background-color: white;
-    padding-top: 250px;
-    padding-left: 10vw;
-    padding-bottom: 100px;
-    padding-right: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: start;
-  }
-  .heading-section .container .col-left .breadcums .breadcum-icon-blue {
-    display: block;
-    width: 16px;
-  }
-  .heading-section .container .col-left .breadcums .breadcum-icon-white {
-    display: none;
-  }
-  .heading-section .container .col-left .breadcums .page {
-    color: #192a3d;
-  }
-  .heading-section .container .col-left .heading-content {
-    margin-top: 0;
-    padding: 0;
-  }
-  .heading-section .container .col-right {
-    display: block;
-  }
-  .heading-section .container .col-right .empty {
-    opacity: 0;
+}
+@media screen and (min-width: 780px) {
+  .heading-section {
+    padding: 150px 25vw 50px 25vw;
   }
 }
 @media screen and (min-width: 540px) {
@@ -478,9 +421,15 @@ section .container {
     grid-template-columns: 46% 46%;
     justify-content: space-between;
   }
+  form .half-form-elements div p {
+    margin-bottom: 15px;
+  }
   form .full-form-elements {
     display: grid;
     width: 100%;
+  }
+  form .full-form-elements div p {
+    margin-bottom: 15px;
   }
 }
 .dropdown {
@@ -515,17 +464,23 @@ section .container {
 
 .hero-section {
   padding: 0;
+  padding-top: 200px;
+  background: url("/static/img/Imbonziarwo music band.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(25, 42, 61, 0.737254902);
+  background-blend-mode: overlay;
 }
 .hero-section .container {
   width: 100%;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 .hero-section .container .col-left {
-  background-color: rgba(242, 245, 247, 0.9568627451);
+  background-color: rgba(242, 245, 247, 0.7411764706);
   padding: 30px;
   border-radius: 10px;
-  margin: -170px 20px 20px 20px;
+  margin: 20px;
   position: relative;
 }
 .hero-section .container .col-left h1 {
@@ -559,7 +514,7 @@ section .container {
   width: 80vw;
   position: absolute;
   top: 0;
-  transition: 1s;
+  transition: ease-in-out 0.3s;
   text-align: start;
   margin-bottom: 20px;
 }
@@ -572,14 +527,27 @@ section .container {
 .hero-section .container .col-left .imboni-video .video iframe {
   height: 200px;
 }
-.hero-section .container .col-right img {
-  height: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
+.hero-section .container .col-right .updates {
+  text-align: start;
+  background-color: rgba(242, 245, 247, 0.7411764706);
+  margin: 20px;
+  padding: 30px;
+  border-radius: 10px;
+}
+.hero-section .container .col-right .updates .updates-list {
+  margin-top: 30px;
+}
+.hero-section .container .col-right .updates .updates-list li a {
+  display: flex;
+  gap: 10px;
+  color: #181818;
+}
+.hero-section .container .col-right .updates .updates-list li a img {
+  width: 30px;
 }
 
 .about-us {
-  background: url("/static/img/Imbonizarwo members.jpg");
+  background: url("/static/img/00-story-protest.jpg");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -621,7 +589,7 @@ section .container {
 }
 
 .programs {
-  background: url("/static/img/imbonizarwo members chatting.jpg");
+  background: url("/static/img/Imbonizarwo students benefiriaries.jpg");
   background-position: center;
   background-size: cover;
   position: relative;
@@ -640,30 +608,41 @@ section .container {
   padding: 30px;
   border-radius: 5px;
 }
+.programs .container .programs-card .program p {
+  margin-bottom: 20px;
+}
 
-.campaigns .container .col-left button {
+.stories .container .col-left button {
   margin-top: 20px;
 }
-.campaigns .container .col-right {
+.stories .container .col-right {
   margin-top: 50px;
 }
-.campaigns .container .col-right .campaign-card {
+.stories .container .col-right .story-card {
   display: grid;
   gap: 20px;
 }
-.campaigns .container .col-right .campaign-card .campaign {
-  position: relative;
+.stories .container .col-right .story-card .story {
+  padding: 30px;
+  border-radius: 5px;
+  color: white;
 }
-.campaigns .container .col-right .campaign-card .campaign .campaign-title {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: var(--offwhite);
+.stories .container .col-right .story-card .first {
+  background-color: #192a3d;
+}
+.stories .container .col-right .story-card .second {
+  background-color: #23a455;
+}
+.stories .container .col-right .story-card .third {
+  background-color: #192a3d;
+}
+.stories .container .col-right .story-card .fourth {
+  background-color: #23a455;
 }
 
 .get-involved {
-  background: url("/static/img/Imbonizarwo music band jabo.jpg");
-  background-position: center;
+  background: url("/static/img/imbonizarwo on umuganda.jpg");
+  background-position: top center;
   background-size: cover;
   position: relative;
   background-color: rgba(25, 42, 61, 0.662745098);
@@ -701,7 +680,6 @@ section .container {
 }
 .blog .container .blogs a .blog .blog-title {
   font-weight: bold;
-  text-align: start;
 }
 .blog .container .blogs a .blog .blog-description {
   display: none;
@@ -782,19 +760,19 @@ footer .container {
   flex-direction: column;
   gap: 20px;
 }
-footer .container .footer-about {
+footer .container .social-media {
   background-color: #284260;
   padding: 20px;
   border-radius: 5px;
 }
-footer .container .footer-about .social-icons {
+footer .container .social-media .social-icons {
   display: flex;
   justify-content: center;
   gap: 20px;
   margin: 20px 0;
 }
-footer .container .footer-about .social-icons a i {
-  font-size: 24px;
+footer .container .social-media .social-icons a i {
+  font-size: 34px;
 }
 footer .container .important-links {
   background-color: #284260;
@@ -807,57 +785,33 @@ footer .container .important-links ol {
   justify-content: center;
   gap: 10px;
 }
-footer .container .footer-blog .blogs {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-footer .container .footer-blog .blogs .blog {
-  border-radius: 5px;
-  background-color: #284260;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-footer .container .footer-blog .blogs .blog img {
-  width: 150px;
-  height: 100px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 5px;
-  z-index: 0;
-}
-footer .container .footer-blog .blogs .blog .blog-description {
-  text-align: start;
-}
 
 @media screen and (min-width: 540px) {
   .hero-section .container {
     width: 80vw;
     flex-direction: row;
     align-items: center;
-    gap: 100px;
-    padding: 250px 0;
+    gap: 50px;
+    padding: 150px 0;
   }
   .hero-section .container .col-left {
     text-align: start;
     width: 50%;
-    padding: 0;
-    border-radius: 0;
-    background-color: white;
-    z-index: 0;
-    margin: 0;
+    background: none;
   }
   .hero-section .container .col-left h1 {
     font-size: 40px;
+    color: whitesmoke;
   }
   .hero-section .container .col-left p {
     font-size: 22px;
+    color: whitesmoke;
   }
   .hero-section .container .col-left .call-to-action {
     flex-direction: row;
   }
   .hero-section .container .col-left .call-to-action .wath-video {
+    color: whitesmoke;
     font-size: 50px;
   }
   .hero-section .container .col-left .call-to-action .wath-video span {
@@ -884,9 +838,6 @@ footer .container .footer-blog .blogs .blog .blog-description {
   .hero-section .container .col-right {
     width: 50%;
   }
-  .hero-section .container .col-right img {
-    border-radius: 100px 0 100px 0;
-  }
   .projects .container .col-right .projects-card {
     grid-template-columns: 50% 50%;
   }
@@ -896,8 +847,17 @@ footer .container .footer-blog .blogs .blog .blog-description {
   .programs .container .programs-card {
     grid-template-columns: 32% 32% 32%;
   }
-  .campaigns .container .col-right .campaign-card {
-    grid-template-columns: 32% 32% 32%;
+  .stories .container .col-right {
+    width: 50%;
+  }
+  .stories .container .col-right .story-card {
+    grid-template-columns: 44.5% 44.5%;
+  }
+  .stories .container .col-right .story-card .third {
+    background-color: #23a455;
+  }
+  .stories .container .col-right .story-card .fourth {
+    background-color: #192a3d;
   }
   .blog .container .blogs {
     grid-template-columns: 50% 50%;
@@ -907,20 +867,31 @@ footer .container .footer-blog .blogs .blog .blog-description {
   }
 }
 @media screen and (min-width: 760px) {
+  .hero-section {
+    height: 100vh;
+    padding: 0;
+    padding-top: 120px;
+  }
   .hero-section .container .col-left h1 {
     font-size: 60px;
     font-weight: bold;
+  }
+  .hero-section .container .col-right {
+    padding-left: 50px;
+  }
+  .hero-section .container .col-right .updates {
+    margin: 0;
   }
   .about-us .container p {
     margin: 20px 25% 70px 25%;
   }
   .projects .container {
     display: flex;
-    gap: 100px;
+    gap: 50px;
     align-items: center;
   }
   .projects .container .col-left {
-    width: 50%;
+    width: 40%;
     text-align: start;
   }
   .projects .container .col-left p {
@@ -930,7 +901,7 @@ footer .container .footer-blog .blogs .blog .blog-description {
     display: block;
   }
   .projects .container .col-right {
-    width: 50%;
+    width: 60%;
   }
   .projects .container .col-right .projects-card {
     grid-template-columns: 46% 46%;
@@ -945,20 +916,20 @@ footer .container .footer-blog .blogs .blog .blog-description {
   .programs .container .programs-card .program {
     padding: 50px;
   }
-  .campaigns .container {
+  .stories .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 100px;
   }
-  .campaigns .container .col-left {
-    width: 50%;
+  .stories .container .col-left {
+    width: 40%;
     text-align: start;
   }
-  .campaigns .container .col-right {
-    width: 50%;
+  .stories .container .col-right {
+    width: 60%;
   }
-  .campaigns .container .col-right .campaign-card {
+  .stories .container .col-right .story-card {
     grid-template-columns: 48% 48%;
     justify-content: space-between;
   }
@@ -1022,13 +993,12 @@ footer .container .footer-blog .blogs .blog .blog-description {
   }
   footer .container {
     display: grid;
-    grid-template-columns: 32% 32% 32%;
+    grid-template-columns: 49% 49%;
   }
-  footer .container .footer-about {
-    padding: 0;
-    background-color: rgba(24, 24, 24, 0);
+  footer .container .social-media {
+    background: var(--dark-blue);
   }
-  footer .container .footer-about .social-icons {
+  footer .container .social-media .social-icons {
     justify-content: start;
   }
   footer .container .important-links {
@@ -1036,7 +1006,8 @@ footer .container .footer-blog .blogs .blog .blog-description {
     background-color: rgba(24, 24, 24, 0);
   }
   footer .container .important-links ol {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: first baseline;
     gap: 10px;
   }
   footer .container .footer-blog {
@@ -1070,12 +1041,16 @@ footer .container .footer-blog .blogs .blog .blog-description {
 }
 
 .member {
-  background: url("/static/img/Imbonizarw music band on stage.JPG");
-  background-position: center;
+  background: url("/static/img/Imbonizarwo members at nyanza!.jpg");
+  background-position: top center;
   background-size: cover;
   background-color: rgba(25, 42, 61, 0.8274509804);
   background-blend-mode: overlay;
   color: white;
+}
+.member .container {
+  padding-top: 150px;
+  padding-top: 150px;
 }
 .member .container p {
   margin-bottom: 40px;
@@ -1186,7 +1161,7 @@ footer .container .footer-blog .blogs .blog .blog-description {
   }
 }
 .login-section {
-  background: url("/static/img/Imbonizarwo members dancing traditionally.jpg");
+  background: url("/static/img/Music-In-Africa-Live-scaled.jpg");
   background-position: center;
   background-size: cover;
   background-color: rgba(25, 42, 61, 0.7098039216);
@@ -1289,7 +1264,7 @@ footer .container .footer-blog .blogs .blog .blog-description {
 }
 .head-seaction {
   height: 400px;
-  background: url("/static/img/Alice.jpg");
+  background: url("/static/img/Music-In-Africa-Live-scaled.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -1306,7 +1281,8 @@ footer .container .footer-blog .blogs .blog .blog-description {
 .application-form form {
   margin-top: 30px;
 }
-.application-form form .half-form-elements, .application-form form .full-form-elements {
+.application-form form .half-form-elements,
+.application-form form .full-form-elements {
   width: 86%;
   margin-top: 30px;
 }
@@ -1322,7 +1298,8 @@ footer .container .footer-blog .blogs .blog .blog-description {
   .application-form .container {
     width: auto;
   }
-  .application-form .container form .half-form-elements, .application-form .container form .full-form-elements {
+  .application-form .container form .half-form-elements,
+.application-form .container form .full-form-elements {
     width: 95%;
   }
 }
@@ -1395,5 +1372,157 @@ footer .container .footer-blog .blogs .blog .blog-description {
   .content-section {
     margin: auto;
     width: 900px;
+  }
+}
+/*
+ CSS for the main interaction
+*/
+.tabset > input[type=radio] {
+  position: absolute;
+  left: -200vw;
+}
+
+.tabset .tab-panel {
+  display: none;
+}
+
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+  display: block;
+}
+
+.gallery {
+  text-align: start;
+}
+.gallery .container .tabset > input[type=radio] {
+  position: absolute;
+  left: -200vw;
+}
+.gallery .container .tabset .tab-panel {
+  display: none;
+}
+.gallery .container .tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.gallery .container .tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.gallery .container .tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.gallery .container .tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.gallery .container .tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.gallery .container .tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+  display: block;
+}
+.gallery .container body {
+  font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+  color: #333;
+  font-weight: 300;
+}
+.gallery .container .tabset > label {
+  position: relative;
+  display: inline-block;
+  padding: 15px 15px 25px;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+.gallery .container .tabset > label::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: 10px;
+  width: 22px;
+  height: 4px;
+  background: #8d8d8d;
+}
+.gallery .container .tabset > label:hover,
+.gallery .container .tabset > input:focus + label {
+  color: #23a455;
+}
+.gallery .container .tabset > label:hover::after,
+.gallery .container .tabset > input:focus + label::after,
+.gallery .container .tabset > input:checked + label::after {
+  background: #23a455;
+}
+.gallery .container .tabset > input:checked + label {
+  border-color: #ccc;
+  border-bottom: 1px solid #fff;
+  margin-bottom: -1px;
+}
+.gallery .container .tab-panel {
+  padding: 30px 0;
+  border-top: 1px solid #ccc;
+}
+.gallery .container .tab-panel .tab-content {
+  display: grid;
+  grid-template-columns: 48% 48%;
+  justify-content: space-between;
+}
+.gallery .container .tab-panel .tab-content img {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 540px) {
+  .gallery .container .tab-panel .tab-content {
+    grid-template-columns: 32.5% 32.5% 32.5%;
+  }
+  .gallery .container .tab-panel .tab-content img {
+    height: 200px;
+  }
+}
+@media screen and (min-width: 780px) {
+  .gallery .container .tab-panel .tab-content {
+    grid-template-columns: 24.5% 24.5% 24.5% 24.5%;
+  }
+  .gallery .container .tab-panel .tab-content img {
+    height: 250px;
+  }
+}
+
+.p-content .container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.p-content .container P {
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 780px) {
+  .p-content .container {
+    width: 60%;
+  }
+  .p-content .container p {
+    padding: 50px;
+  }
+}
+.p-cards .container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.p-cards .container .card {
+  border: 1px #23a455 solid;
+  padding: 20px;
+  border-radius: 5px;
+}
+.p-cards .container .card a {
+  cursor: pointer;
+  color: #192a3d;
+}
+.p-cards .container .card a .heading {
+  font-size: 18px;
+}
+
+@media screen and (min-width: 780px) {
+  .p-cards .container {
+    width: 60%;
+    flex-direction: row;
   }
 }/*# sourceMappingURL=styles.css.map */
