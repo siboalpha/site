@@ -62,3 +62,26 @@ class VolunteersForm(ModelForm):
             'owns_a_computer': Select(attrs={'class':'form-control', 'placeholder': 'Yes or No'}),
             'cv': FileInput(attrs={'class':'form-control', 'placeholder': 'Yes or No'}),
         }
+
+
+class MembershipApplicationForm(ModelForm):
+    class Meta:
+        model = MembershipApplication
+        fields = ['first_name', 'last_name', 'email', 'phone_number', 'nationality',
+        'current_adress', 'level_of_education', 'specialization', 'graduation_country',
+        'application_letter', 'cv']
+        widgets = {
+            'first_name': TextInput(attrs={'class':'form-control', 'placeholder': 'Your first name'}),
+            'last_name': TextInput(attrs={'class':'form-control', 'placeholder': 'Your last name'}),
+            'email': TextInput(attrs={'class':'form-control', 'placeholder': 'email'}),
+            'phone_number': TextInput(attrs={'class':'form-control', 'placeholder': 'Your phone number'}),
+            'nationality': TextInput(attrs={'class':'form-control', 'placeholder': 'nationality'}),
+            'current_adress': TextInput(attrs={'class':'form-control', 'placeholder': 'current adress'}),
+            'level_of_education': TextInput(attrs={'class':'form-control', 'placeholder': 'level of education'}),
+            'specialization': TextInput(attrs={'class':'form-control', 'placeholder': 'specialization'}),
+            'graduation_country': TextInput(attrs={'class':'form-control', 'placeholder': 'graduation country'}),
+            'application_letter': FileInput(attrs={'class':'form-control', 'placeholder': 'Application letter'}),
+            'cv': FileInput(attrs={'class':'form-control', 'placeholder': 'CV'}),
+        }
+
+

@@ -641,7 +641,7 @@ section .container {
 }
 
 .get-involved {
-  background: url("/static/img/imbonizarwo on umuganda.jpg");
+  background: url("/static/img/Imbonizarwo members dancing traditionally.jpg");
   background-position: top center;
   background-size: cover;
   position: relative;
@@ -1541,5 +1541,37 @@ footer .container .important-links ol {
     width: 90%;
     display: grid;
     grid-template-columns: 33% 33% 33%;
+  }
+}
+.member-appliction {
+  padding: 50px 0;
+}
+.member-appliction .container {
+  padding: 0;
+  text-align: start;
+}
+.member-appliction .container h3 {
+  margin: 35px 0 15px 0;
+}
+.member-appliction .container .details {
+  background-color: var(--offwhite);
+  padding: 20px;
+  margin-bottom: 15px;
+}
+.member-appliction .container ol {
+  margin-top: -55px;
+}
+.member-appliction .container ol li {
+  list-style: disc;
+  list-style-type: upper-roman;
+  margin: 20px;
+}
+.member-appliction .container .member-application-form form .elements {
+  width: 93%;
+}
+
+@media screen and (min-width: 1000px) {
+  .member-appliction .container {
+    max-width: 1000px;
   }
 }/*# sourceMappingURL=styles.css.map */

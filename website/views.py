@@ -143,7 +143,14 @@ def  volunteering(request):
     return render(request, 'volunteers.html', context)
 
 def becomeMember(request):
-    return render(request, 'coming-soon.html')
+    form = MembershipApplicationForm()
+    if request.method == "POST":
+        form = MembershipApplicationForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('application-complete')
+    context = {"form": form}
+    return render(request, 'become-a-member.html', context)
 
 def primaryHealCare(request):
     return render(request, 'primary-health-care-services.html')

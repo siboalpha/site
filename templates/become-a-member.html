@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="heading-section">
+    <div class="container">
+        <div class="heading-content">
+            <h1 class="heading">Member Application</h1>
+        </div>
+    </div>
+</section>
+
+<section class="member-appliction">
+    <div class="container">
+        <p class="details">
+            Are you interested in Imbonizarwo long term mission and vision; would you like to become a member of our Non-government Organization? 
+        </p>
+        <p class="details">
+            Applications is now open to everyone who needs to become one among the effective members of Imbonizarwo, 
+        </p>
+        <p class="details">
+            Do you need to know more about our activities? Kindly go back to the site and get more details through the page indicating About IMBONIYZARWO
+        </p>
+
+        <h3>Basic Information</h3>
+        <p class="details">
+            Imbonizarwo is a non-profit making organization, our main interest is to build responsible citizens by enhancing primally health Care Services, Gender promotion (SRHR, STIs and Mental Health), Peace Building and Charitable Acts through interconnection of Generation
+        </p>
+        <p class="details">
+            Imbonizarwo implement its planned activities by using the organization internal generated revenues know as monthly contributions, the non-refundable amount which is determined by the general assembly.
+        </p>
+
+        <p class="details">
+            Currently we are implementing three main programs which includes:
+            <ol class="details">
+                <li>Fighting against Teenage Pregnancies, STIs and SRHR in Rwanda</li>
+                <li>Fighting against Drug Abuse in Rwanda </li>
+                <li>Promoting peace, unity and reconciliation among Rwandans </li>
+            </ol>
+        </p>
+
+        <h3>Applicational requirements</h3>
+        <p class="details">
+            - Application letter addressed to the organizational legal representative <br>
+            - Your detailed CV
+        </p>
+        <div class="member-application-form">
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <p>Fill the application form with relavant information</p>
+                <div class="elements half-form-elements">
+                    <div>
+                        {{form.first_name}}
+                    </div>
+                    <div>
+                        {{form.last_name}}
+                    </div>
+                    <div>
+                        {{form.email}}
+                    </div>
+                    <div>
+                        {{form.phone_number}}
+                    </div>
+                    <div>
+                        {{form.nationality}}
+                    </div>
+                    <div>
+                        {{form.current_adress}}
+                    </div>
+                </div>
+                <div class="elements half-form-elements">
+                    <div>
+                        {{form.level_of_education}}
+                    </div>
+                    <div>
+                        {{form.specialization}}
+                    </div>
+                    <div>
+                        {{form.graduation_country}}
+                    </div>
+                </div>
+                <div class="elements half-form-elements">
+                    <div>
+                        <p>Upload your application letter</p>
+                        {{form.application_letter}}
+                    </div>
+                    <div>
+                        <p>
+                            Attach your CV (Maximum two pages)
+                        </p>
+                        {{form.cv}}
+                    </div>
+
+                    <input class="submit-btn btn-green form-control" type="submit" value="Submit application">
+                </div>
+            </form>
+        </div>
+        <p>For mor information, kindly contact us</p>
+        <a href="{% url 'contact' %}"><button class="btn-green">Contact us</button></a>
+    </div>
+</section>
+
+{% endblock %}
