@@ -1026,6 +1026,7 @@ footer {
 
             .col-right {
                 width: 50%;
+                align-self: flex-end;
             }
         }
     }
@@ -1389,6 +1390,7 @@ footer {
     background: url("/static/img/Imbonizarwo\ members\ at\ nyanza!.jpg");
     background-position: top center;
     background-size: cover;
+    background-attachment: fixed;
     background-color: #192a3dd3;
     background-blend-mode: overlay;
     color: white;
@@ -2054,7 +2056,14 @@ footer {
                 color: #192a3d;
                 .heading {
                     font-size: 18px;
-               } 
+               }
+
+               p {
+                background-color: var(--offwhite);
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+               }
             }
         }
     }
@@ -2065,8 +2074,19 @@ footer {
 @media screen and (min-width: 780px) {
     .p-cards {
         .container {
-            width: 60%;
-            flex-direction: row;
+            width: 90%;
+            display: grid;
+            grid-template-columns: 49% 49%;
+        }
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .p-cards {
+        .container {
+            width: 90%;
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
         }
     }
 }

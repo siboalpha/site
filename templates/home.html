@@ -12,7 +12,9 @@
                  Arts, campaign and Interconnecting Generation. 
             </p>
             <div class="call-to-action">
-                <button class="learn-more btn-green">Learn more</button>
+                <a href="{% url 'about' %}">
+                    <button class="learn-more btn-green">Learn more</button>
+                </a>
                 <a class="wath-video open-button" onclick="openForm()"><i class="fas fa-play-circle"></i>
                     <span>Watch the video </span></a>
             </div>
@@ -20,7 +22,7 @@
                 <img onclick="closeForm()" src="{% static 'img/Close button.svg' %}" alt="">
                 <div class="video">
                     <iframe width="100%" height="auto"
-                        src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1controls=0">
+                        src=https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1controls=0 https://www.youtube.com/watch?v=R6n8XMwq_Yc?autoplay=1controls=0">
                     </iframe>
                 </div>
             </div>
@@ -71,7 +73,7 @@
     <div class="container">
         <div class="col-left">
             <h4 class="sub-heading">What we do</h4>
-            <h1 class="heading">Our Projects</h1>
+            <h1 class="heading">Our YouTube channel</h1>
             <p>
                 We run multiple projects that mostly focus on our programs. 
                 Our youth members do thier best to user their talent to 
@@ -79,7 +81,9 @@
                 Click on videos to view and listed to our messages, share 
                 and subscribe for more upcoming projects 
             </p>
-            <button class="btn-green">More projects</button>
+            <a href="https://www.youtube.com/channel/UCpUb64qdUlS9E2bPCRSHc8A/videos" target="_blank">
+                <button class="btn-green">More projects</button>
+            </a>
 
         </div>
 
@@ -210,7 +214,7 @@
             {% for blog in blogs %}
             <a href="{% url 'single-blog' blog.id %}">
                 <div class="blog">
-                    <img src="{% static 'img/imbonizarwo members chatting.jpg' %}" alt="">
+                    <img src="{{blog.featured_image.url}}" alt="">
                     <p class="blog-title">
                         {{blog.title}}
                     </p>
@@ -257,10 +261,14 @@
                 <a href="tel:+ 250 788 352 503" class="icon-list">
                     <i class="fas fa-phone-alt"><span>+ 250 788 352 503</span></i>
                 </a>
-                <a href="https://wa.me/250788352503" class="icon-list">
-                    <i class="fa fa-whatsapp"><span>+ 250 788 352 503</span></i>
+                <a href="tel:+ 250 788 241 893" class="icon-list">
+                    <i class="fas fa-phone-alt"><span>+ 250 788 241 893</span></i>
                 </a>
 
+                <a href="tel:+ 250 788 903 868" class="icon-list">
+                    <i class="fas fa-phone-alt"><span>+ 250 788 903 868</span></i>
+                </a>
+                
                 <div class="social-icons">
                     <a href="https://www.facebook.com/Imbonizarwo/" class="icon-list">
                         <i class="fa fa-facebook-square"></i>

@@ -19,7 +19,7 @@
             {% for blog in blogs %}
             <a href="{% url 'single-blog' blog.id %}">
                 <div class="blog">
-                    <img src="{% static 'img/imbonizarwo members chatting.jpg' %}" alt="">
+                    <img src="{{blog.featured_image.url}}" alt="">
                     <p class="blog-title">
                         {{blog.title}}
                     </p>

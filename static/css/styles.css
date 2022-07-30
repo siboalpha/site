@@ -838,6 +838,7 @@ footer .container .important-links ol {
   }
   .hero-section .container .col-right {
     width: 50%;
+    align-self: flex-end;
   }
   .projects .container .col-right .projects-card {
     grid-template-columns: 50% 50%;
@@ -1045,6 +1046,7 @@ footer .container .important-links ol {
   background: url("/static/img/Imbonizarwo members at nyanza!.jpg");
   background-position: top center;
   background-size: cover;
+  background-attachment: fixed;
   background-color: rgba(25, 42, 61, 0.8274509804);
   background-blend-mode: overlay;
   color: white;
@@ -1520,10 +1522,24 @@ footer .container .important-links ol {
 .p-cards .container .card a .heading {
   font-size: 18px;
 }
+.p-cards .container .card a p {
+  background-color: var(--offwhite);
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
 
 @media screen and (min-width: 780px) {
   .p-cards .container {
-    width: 60%;
-    flex-direction: row;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 49% 49%;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .p-cards .container {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
   }
 }/*# sourceMappingURL=styles.css.map */
