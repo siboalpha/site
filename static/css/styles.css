@@ -609,7 +609,7 @@ section .container {
   border-radius: 5px;
 }
 .programs .container .programs-card .program p {
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .stories .container .col-left button {
