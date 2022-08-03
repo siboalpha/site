@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+from typing import Tuple
 from dotenv import load_dotenv
 #load_dotenv()
 load_dotenv("/home/admin/site/DjangoApp/.env")
