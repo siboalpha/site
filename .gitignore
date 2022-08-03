@@ -4,3 +4,4 @@ DjangoApp/.env
 db.sqlite3
 configurations.txt
 media/
+staticfiles/

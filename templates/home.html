@@ -216,10 +216,10 @@
                 <div class="blog">
                     <img src="{{blog.featured_image.url}}" alt="">
                     <p class="blog-title">
-                        {{blog.title}}
+                        {{blog.title|truncatechars:60}} 
                     </p>
                     <p class="blog-description">
-                        {{blog.excerpt}}... <span class="read-more">Read more <i class="fas fa-angle-double-right"></i></span>
+                        {{blog.excerpt|truncatechars:150}}... <span class="read-more">Read more <i class="fas fa-angle-double-right"></i></span>
                     </p>
                 </div>
             </a>
@@ -265,8 +265,8 @@
                     <i class="fas fa-phone-alt"><span>+ 250 788 241 893</span></i>
                 </a>
 
-                <a href="tel:+ 250 788 903 868" class="icon-list">
-                    <i class="fas fa-phone-alt"><span>+ 250 788 903 868</span></i>
+                <a href="tel:+250 786 236 090" class="icon-list">
+                    <i class="fas fa-phone-alt"><span>+250 786 236 090</span></i>
                 </a>
                 
                 <div class="social-icons">
